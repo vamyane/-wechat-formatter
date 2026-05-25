@@ -116,6 +116,36 @@ function renderMathInPreview() {
 }
 
 // ── 工具栏功能 ──
+// ── 对齐功能 ──
+function setAlign(align) {
+  const sel = window.getSelection();
+  if (!sel.rangeCount) return;
+  const node = sel.anchorNode;
+  // 如果选中的是图片或图片的父元素
+  const el = node.nodeType === 3 ? node.parentElement : node;
+  const img = el.closest ? el.closest('img') : (el.tagName === 'IMG' ? el : null);
+  if (img) {
+    // 图片对齐
+    if (align === 'center') {
+      img.style.display = 'block';
+      img.style.marginLeft = 'auto';
+      img.style.marginRight = 'auto';
+    } else if (align === 'right') {
+      img.style.display = 'block';
+      img.style.marginLeft = 'auto';
+      img.style.marginRight = '0';
+    } else {
+      img.style.display = 'block';
+      img.style.marginLeft = '0';
+      img.style.marginRight = 'auto';
+    }
+  } else {
+    // 文本对齐
+    document.execCommand('justify' + align.charAt(0).toUpperCase() + align.slice(1));
+  }
+  render();
+}
+
 function fmt(tag) {
   if (tag === 'blockquote') {
     // 引用：每段独立引用，不合并
