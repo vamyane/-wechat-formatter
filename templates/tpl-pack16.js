@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板包16：复杂精品（下）
  * 每个模板都有独特的结构设计
  */
@@ -13,7 +13,7 @@ registerTemplate('pixel-game', {
   render(c) {
     const p = c.primary, b = c.bg;
     return {
-      body: `font-family:'Press Start 2P','Courier New',monospace;color:#e0e0e0;font-size:12px;line-height:2.2;background:${b};`,
+      body: `font-family:'Courier New',monospace;color:#e0e0e0;font-size:12px;line-height:2.2;background:${b};`,
       h1: `font-size:18px;color:#ffcc00;font-weight:400;margin:28px 0 16px;text-align:center;text-shadow:2px 2px 0 #000;letter-spacing:2px;`,
       h2: `font-size:14px;color:${p};margin:28px 0 12px;font-weight:400;padding:10px 16px;background:#16213e;border:2px solid ${p};text-shadow:1px 1px 0 #000;`,
       h3: `font-size:12px;color:#00ff88;margin:24px 0 10px;font-weight:400;`,
@@ -39,7 +39,7 @@ registerTemplate('wabi-sabi', {
   render(c) {
     const p = c.primary, b = c.bg;
     return {
-      body: `font-family:'Noto Serif SC','Yu Mincho',serif;color:#3a3a3a;font-size:16px;line-height:2.4;background:${b};`,
+      body: `font-family:'SimSun','Noto Serif SC',serif;color:#3a3a3a;font-size:16px;line-height:2.4;background:${b};`,
       h1: `font-size:24px;color:${p};font-weight:300;margin:60px 0 20px;letter-spacing:10px;`,
       h2: `font-size:15px;color:#888;margin:48px 0 16px;font-weight:300;letter-spacing:4px;padding-left:20px;border-left:1px solid #ccc;`,
       h3: `font-size:17px;color:#555;margin:32px 0 10px;font-weight:400;letter-spacing:2px;`,
@@ -101,7 +101,7 @@ registerTemplate('coffee-menu', {
       divider: `text-align:center;margin:28px 0;color:#c0a888;font-size:18px;letter-spacing:8px;`,
       strong: `color:${p};font-weight:700;`,
       img: `max-width:100%;margin:14px auto;display:block;border-radius:12px;`,
-      num: `display:inline-block;color:${p};font-size:20px;font-weight:700;margin-right:10px;font-family:Georgia,serif;`,
+      num: `display:inline-block;color:${p};font-size:20px;font-weight:700;margin-right:10px;font-family:Georgia,'SimSun',serif;`,
       card: `background:#fff;border:1px solid #d8c8b0;padding:24px;margin:16px 0;border-radius:12px;box-shadow:0 2px 8px rgba(92,61,46,.06);`,
     };
   }
@@ -117,7 +117,7 @@ registerTemplate('tech-dashboard', {
   render(c) {
     const p = c.primary, b = c.bg;
     return {
-      body: `font-family:'SF Mono','Fira Code','PingFang SC',monospace;color:#c9d1d9;font-size:15px;line-height:1.9;background:${b};`,
+      body: `font-family:'Courier New',monospace;color:#c9d1d9;font-size:15px;line-height:1.9;background:${b};`,
       h1: `font-size:24px;color:${p};font-weight:700;margin:28px 0 14px;padding:16px 20px;background:${p}08;border:1px solid ${p}22;border-radius:8px;border-left:4px solid ${p};`,
       h2: `font-size:16px;color:${p};margin:28px 0 12px;font-weight:600;padding:8px 14px;background:#161b22;border-radius:6px;border:1px solid #30363d;`,
       h3: `font-size:14px;color:#8b949e;margin:24px 0 10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;`,

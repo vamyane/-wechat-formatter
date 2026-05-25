@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板包15：复杂精品（上）
  * 每个模板都有独特的结构设计，不只是换色
  */
@@ -23,7 +23,7 @@ registerTemplate('magazine-spread', {
       divider: `text-align:center;margin:32px 0;color:${p};font-size:18px;letter-spacing:12px;`,
       strong: `color:${p};font-weight:700;font-style:italic;`,
       img: `max-width:100%;margin:20px auto;display:block;`,
-      num: `font-family:Georgia,serif;font-size:28px;color:${p};font-weight:700;margin-right:12px;font-style:italic;`,
+      num: `font-family:Georgia,'SimSun',serif;font-size:28px;color:${p};font-weight:700;margin-right:12px;font-style:italic;`,
       card: `background:#fff;border:1px solid #e0e0e0;padding:28px;margin:20px 0;box-shadow:2px 2px 0 ${p}22;`,
     };
   }
@@ -39,7 +39,7 @@ registerTemplate('neon-sign', {
   render(c) {
     const p = c.primary, b = c.bg;
     return {
-      body: `font-family:'SF Mono','Menlo',monospace;color:#c0c0c0;font-size:15px;line-height:1.9;background:${b};`,
+      body: `font-family:'Courier New',monospace;color:#c0c0c0;font-size:15px;line-height:1.9;background:${b};`,
       h1: `font-size:28px;color:${p};font-weight:900;margin:32px 0 16px;text-align:center;text-shadow:0 0 10px ${p}88,0 0 40px ${p}44,0 0 80px ${p}22;letter-spacing:4px;`,
       h2: `font-size:20px;color:${p};margin:36px 0 14px;font-weight:700;padding:12px 20px;border:1px solid ${p}44;border-left:3px solid ${p};background:${p}08;box-shadow:0 0 15px ${p}11 inset;`,
       h3: `font-size:16px;color:${p};margin:24px 0 10px;font-weight:600;text-shadow:0 0 8px ${p}66;`,
@@ -65,7 +65,7 @@ registerTemplate('handwritten', {
   render(c) {
     const p = c.primary, b = c.bg;
     return {
-      body: `font-family:'Comic Sans MS','ZCOOL KuaiLe','Ma Shan Zheng',cursive;color:#3a3a3a;font-size:16px;line-height:2.2;background:${b};background-image:repeating-linear-gradient(transparent,transparent 31px,#e8ddd0 31px,#e8ddd0 32px);`,
+      body: `font-family:'Georgia','SimSun',serif;color:#3a3a3a;font-size:16px;line-height:2.2;background:${b};background-image:repeating-linear-gradient(transparent,transparent 31px,#e8ddd0 31px,#e8ddd0 32px);`,
       h1: `font-size:26px;color:${p};font-weight:400;margin:24px 0 16px;text-decoration:underline;text-decoration-wavy;text-underline-offset:8px;`,
       h2: `font-size:20px;color:${p};margin:32px 0 12px;font-weight:400;transform:rotate(-0.5deg);`,
       h3: `font-size:17px;color:#5a5a5a;margin:24px 0 10px;font-weight:400;text-decoration:underline;text-decoration-style:dashed;`,
@@ -91,7 +91,7 @@ registerTemplate('wireframe', {
   render(c) {
     const p = c.primary, b = c.bg;
     return {
-      body: `font-family:'Helvetica Neue','Arial',sans-serif;color:#111;font-size:15px;line-height:2;background:${b};`,
+      body: `font-family:'PingFang SC','Microsoft YaHei',sans-serif;color:#111;font-size:15px;line-height:2;background:${b};`,
       h1: `font-size:36px;color:${p};font-weight:200;margin:48px 0 12px;letter-spacing:12px;text-transform:uppercase;`,
       h2: `font-size:13px;color:${p};margin:56px 0 16px;font-weight:500;letter-spacing:6px;text-transform:uppercase;padding-bottom:12px;border-bottom:1px solid ${p};`,
       h3: `font-size:16px;color:${p};margin:32px 0 10px;font-weight:500;letter-spacing:3px;`,
@@ -153,7 +153,7 @@ registerTemplate('newspaper', {
       divider: `text-align:center;margin:28px 0;color:#bbb;font-size:16px;letter-spacing:4px;`,
       strong: `color:${p};font-weight:700;`,
       img: `max-width:100%;margin:16px auto;display:block;`,
-      num: `font-family:Georgia,serif;font-size:24px;color:${p};font-weight:700;margin-right:10px;`,
+      num: `font-family:Georgia,'SimSun',serif;font-size:24px;color:${p};font-weight:700;margin-right:10px;`,
       card: `background:#fff;border:1px solid #d0c8b8;padding:24px;margin:16px 0;box-shadow:3px 3px 0 #e0d8c8;`,
     };
   }
@@ -195,7 +195,7 @@ registerTemplate('glitch', {
   render(c) {
     const p = c.primary, b = c.bg;
     return {
-      body: `font-family:'SF Mono','Fira Code',monospace;color:#e0e0e0;font-size:15px;line-height:1.9;background:${b};`,
+      body: `font-family:'Courier New',monospace;color:#e0e0e0;font-size:15px;line-height:1.9;background:${b};`,
       h1: `font-size:30px;color:#fff;font-weight:900;margin:28px 0 14px;text-align:center;text-shadow:3px 0 #ff0055,-3px 0 #00ff88;letter-spacing:6px;`,
       h2: `font-size:18px;color:${p};margin:32px 0 12px;font-weight:700;padding:10px 16px;background:${p}11;border:1px solid ${p}44;border-left:4px solid ${p};font-family:monospace;`,
       h3: `font-size:15px;color:#00ff88;margin:24px 0 10px;font-weight:600;font-family:monospace;`,
@@ -257,7 +257,7 @@ registerTemplate('film-vintage', {
       divider: `text-align:center;margin:28px 0;color:#c0b090;font-size:14px;letter-spacing:6px;`,
       strong: `color:${p};font-weight:700;`,
       img: `max-width:100%;margin:14px auto;display:block;border:6px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.15);filter:sepia(.15) contrast(1.05);`,
-      num: `display:inline-block;color:${p};font-size:20px;font-weight:700;margin-right:8px;font-family:Georgia,serif;`,
+      num: `display:inline-block;color:${p};font-size:20px;font-weight:700;margin-right:8px;font-family:Georgia,'SimSun',serif;`,
       card: `background:#faf5e8;border:1px solid #d8c8a8;padding:24px;margin:16px 0;box-shadow:2px 2px 0 #e8dcc8;`,
     };
   }

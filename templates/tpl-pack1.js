@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板包：极简线框 / 学术论文 / 暗金奢华 / 粉色少女 / 赛博朋克
  */
 
@@ -11,7 +11,7 @@ registerTemplate('wireframe', {
   render(c) {
     const p = c.primary, b = c.bg;
     return {
-      body: `font-family:-apple-system,'Helvetica Neue','PingFang SC',sans-serif;color:#333;font-size:16px;line-height:2.2;background:${b};`,
+      body: `font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;color:#333;font-size:16px;line-height:2.2;background:${b};`,
       h1: `text-align:center;font-size:22px;color:${p};font-weight:300;margin:30px 0 16px;letter-spacing:6px;border:1px solid ${p};padding:12px 24px;line-height:1.5;`,
       h2: `font-size:17px;color:${p};font-weight:300;margin:40px 0 14px;letter-spacing:3px;border-bottom:1px solid ${p};padding-bottom:8px;line-height:1.6;`,
       h3: `font-size:15px;color:${p};font-weight:400;margin:28px 0 10px;letter-spacing:2px;`,
@@ -37,8 +37,8 @@ registerTemplate('academic', {
     const p = c.primary, b = c.bg;
     return {
       body: `font-family:Georgia,"Noto Serif SC","SimSun",serif;color:#1a1a1a;font-size:16px;line-height:2;background:${b};`,
-      h1: `text-align:center;font-size:22px;color:${p};font-weight:700;margin:30px 0 10px;font-family:Georgia,serif;letter-spacing:1px;line-height:1.5;`,
-      h2: `font-size:18px;color:${p};font-weight:700;margin:36px 0 12px;font-family:Georgia,serif;line-height:1.5;`,
+      h1: `text-align:center;font-size:22px;color:${p};font-weight:700;margin:30px 0 10px;font-family:Georgia,'SimSun',serif;letter-spacing:1px;line-height:1.5;`,
+      h2: `font-size:18px;color:${p};font-weight:700;margin:36px 0 12px;font-family:Georgia,'SimSun',serif;line-height:1.5;`,
       h3: `font-size:16px;color:${p};font-weight:700;margin:24px 0 10px;font-style:italic;`,
       p: `margin:12px 0;font-size:16px;color:#1a1a1a;line-height:2;text-indent:2em;`,
       quote: `margin:16px 40px;padding:12px 16px;font-size:14px;color:#555;line-height:1.8;border-left:2px solid #ccc;font-style:italic;`,
@@ -46,7 +46,7 @@ registerTemplate('academic', {
       divider: `text-align:center;margin:28px 0;color:#999;font-size:14px;`,
       strong: `color:${p};font-weight:700;`,
       img: `max-width:100%;margin:16px auto;display:block;border:1px solid #ddd;`,
-      num: `font-family:Georgia,serif;font-size:14px;color:${p};margin-right:6px;`,
+      num: `font-family:Georgia,'SimSun',serif;font-size:14px;color:${p};margin-right:6px;`,
       card: `margin:16px 0;padding:16px;border:1px solid #ddd;background:#fafaf5;font-size:14px;`,
     };
   }

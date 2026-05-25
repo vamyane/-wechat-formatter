@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板包：红黑经典 / 极光渐变 / 复古打字机 / 工业金属 / 水墨丹青
  */
 
@@ -86,7 +86,7 @@ registerTemplate('metal', {
   render(c) {
     const p = c.primary, b = c.bg;
     return {
-      body: `font-family:-apple-system,'Helvetica Neue','PingFang SC',sans-serif;color:#d0d0d0;font-size:16px;line-height:2;background:${b};`,
+      body: `font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;color:#d0d0d0;font-size:16px;line-height:2;background:${b};`,
       h1: `text-align:center;font-size:22px;color:${p};font-weight:900;margin:28px 0 14px;letter-spacing:3px;line-height:1.5;text-transform:uppercase;`,
       h2: `font-size:17px;color:${p};margin:32px 0 14px;padding:8px 14px;border:1px solid ${p}44;line-height:1.5;font-weight:700;background:${p}08;`,
       h3: `font-size:15px;color:#e0e0e0;margin:24px 0 10px;font-weight:700;padding-left:10px;border-left:3px solid ${p};`,

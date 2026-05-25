@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板包：中国风 / 手写体 / 报纸头条 / 薄荷清新 / 日式无印
  */
 
@@ -32,13 +32,13 @@ registerTemplate('handwrite', {
   name: '手写体',
   desc: '亲切手写感，适合个人随笔',
   primary: '#2c3e50', bg: '#fffef9',
-  demo: '<div style="font-family:cursive;font-size:14px;color:#2c3e50;font-style:italic">手写笔记</div>',
+  demo: '<div style="font-family:serif;font-size:14px;color:#2c3e50;font-style:italic">手写笔记</div>',
   render(c) {
     const p = c.primary, b = c.bg;
     return {
-      body: `font-family:'Comic Sans MS',cursive,'PingFang SC',sans-serif;color:#3a3a3a;font-size:16px;line-height:2.2;background:${b};`,
-      h1: `text-align:center;font-size:24px;color:${p};font-weight:400;margin:28px 0 14px;font-family:cursive,'Comic Sans MS',sans-serif;line-height:1.5;font-style:italic;`,
-      h2: `font-size:20px;color:${p};margin:32px 0 14px;font-family:cursive,sans-serif;font-weight:400;font-style:italic;line-height:1.5;text-decoration:underline;text-decoration-style:wavy;text-underline-offset:6px;`,
+      body: `font-family:'Georgia','SimSun',serif;color:#3a3a3a;font-size:16px;line-height:2.2;background:${b};`,
+      h1: `text-align:center;font-size:24px;color:${p};font-weight:400;margin:28px 0 14px;font-family:'Georgia','SimSun',serif;line-height:1.5;font-style:italic;`,
+      h2: `font-size:20px;color:${p};margin:32px 0 14px;font-family:'Georgia','SimSun',serif;font-weight:400;font-style:italic;line-height:1.5;text-decoration:underline;text-decoration-style:wavy;text-underline-offset:6px;`,
       h3: `font-size:17px;color:${p};margin:24px 0 10px;font-style:italic;`,
       p: `margin:14px 0;font-size:16px;color:#3a3a3a;line-height:2.2;`,
       quote: `border-left:3px solid ${p}44;padding:14px 20px;margin:20px 0;color:#666;font-size:15px;line-height:1.8;font-style:italic;background:${p}04;`,
@@ -57,7 +57,7 @@ registerTemplate('newspaper', {
   name: '报纸头条',
   desc: '黑白报纸风格，适合新闻/评论',
   primary: '#000000', bg: '#f5f0e8',
-  demo: '<div style="font-family:Georgia,serif;font-size:16px;font-weight:900;color:#000;border-bottom:3px solid #000;padding-bottom:2px">HEADLINE</div>',
+  demo: '<div style="font-family:Georgia,'SimSun',serif;font-size:16px;font-weight:900;color:#000;border-bottom:3px solid #000;padding-bottom:2px">HEADLINE</div>',
   render(c) {
     const p = c.primary, b = c.bg;
     return {
@@ -71,7 +71,7 @@ registerTemplate('newspaper', {
       divider: `text-align:center;margin:24px 0;color:${p};font-size:18px;letter-spacing:8px;`,
       strong: `color:${p};font-weight:900;`,
       img: `max-width:100%;margin:16px auto;display:block;`,
-      num: `font-family:Georgia,serif;font-size:24px;color:${p};font-weight:900;margin-right:6px;`,
+      num: `font-family:Georgia,'SimSun',serif;font-size:24px;color:${p};font-weight:900;margin-right:6px;`,
       card: `border:2px solid ${p};padding:20px;margin:16px 0;`,
     };
   }
@@ -111,7 +111,7 @@ registerTemplate('muji', {
   render(c) {
     const p = c.primary, b = c.bg;
     return {
-      body: `font-family:-apple-system,'Hiragino Sans','PingFang SC',sans-serif;color:#333;font-size:16px;line-height:2.4;background:${b};`,
+      body: `font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;color:#333;font-size:16px;line-height:2.4;background:${b};`,
       h1: `text-align:center;font-size:20px;color:${p};font-weight:300;margin:36px 0 16px;letter-spacing:8px;line-height:1.6;`,
       h2: `font-size:17px;color:${p};font-weight:300;margin:40px 0 14px;letter-spacing:4px;line-height:1.6;`,
       h3: `font-size:15px;color:#333;font-weight:400;margin:28px 0 10px;letter-spacing:2px;`,

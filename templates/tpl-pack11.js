@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板包11：特殊风格（上）
  * 分类：special（特殊风格）
  */
@@ -41,7 +41,7 @@ registerTemplate('zen', {
   render(c) {
     const p = c.primary, b = c.bg;
     return {
-      body: `font-family:'Hiragino Sans','PingFang SC',sans-serif;color:#3a3028;font-size:16px;line-height:2.6;background:${b};`,
+      body: `font-family:'PingFang SC','Microsoft YaHei',sans-serif;color:#3a3028;font-size:16px;line-height:2.6;background:${b};`,
       h1: `text-align:center;font-size:28px;color:${p};font-weight:200;margin:40px 0 20px;line-height:1.4;letter-spacing:15px;`,
       h2: `font-size:17px;color:${p};font-weight:300;margin:48px 0 14px;letter-spacing:6px;line-height:1.6;text-align:center;`,
       h3: `font-size:15px;color:${p};font-weight:300;margin:32px 0 10px;letter-spacing:4px;`,
@@ -68,7 +68,7 @@ registerTemplate('korean', {
   render(c) {
     const p = c.primary, b = c.bg;
     return {
-      body: `font-family:-apple-system,'PingFang SC','Apple SD Gothic Neo',sans-serif;color:#4a4040;font-size:15px;line-height:2.2;background:${b};`,
+      body: `font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;color:#4a4040;font-size:15px;line-height:2.2;background:${b};`,
       h1: `text-align:center;font-size:20px;color:${p};font-weight:600;margin:28px 0 14px;line-height:1.6;letter-spacing:4px;`,
       h2: `font-size:17px;color:${p};margin:32px 0 12px;font-weight:500;line-height:1.6;text-align:center;letter-spacing:2px;`,
       h3: `font-size:15px;color:#4a4040;margin:24px 0 10px;font-weight:500;`,
@@ -96,7 +96,7 @@ registerTemplate('french', {
     const p = c.primary, b = c.bg;
     return {
       body: `font-family:Georgia,'Noto Serif SC','STSong',serif;color:#2c3e50;font-size:16px;line-height:2.2;background:${b};`,
-      h1: `text-align:center;font-size:24px;color:${p};font-weight:400;margin:30px 0 14px;line-height:1.5;font-style:italic;letter-spacing:4px;font-family:Georgia,serif;`,
+      h1: `text-align:center;font-size:24px;color:${p};font-weight:400;margin:30px 0 14px;line-height:1.5;font-style:italic;letter-spacing:4px;font-family:Georgia,'SimSun',serif;`,
       h2: `font-size:19px;color:${p};margin:36px 0 14px;font-weight:400;line-height:1.5;text-align:center;font-style:italic;letter-spacing:3px;border-bottom:1px solid #ddd;padding-bottom:10px;`,
       h3: `font-size:16px;color:${p};margin:24px 0 10px;font-weight:600;letter-spacing:1px;`,
       p: `margin:14px 0;font-size:16px;color:#2c3e50;line-height:2.2;text-indent:2em;`,
@@ -105,7 +105,7 @@ registerTemplate('french', {
       divider: `text-align:center;margin:32px 0;color:#bdc3c7;font-size:16px;letter-spacing:10px;`,
       strong: `color:${p};font-weight:700;font-style:normal;`,
       img: `max-width:100%;margin:18px auto;display:block;`,
-      num: `font-family:Georgia,serif;color:${p};font-size:20px;font-weight:400;font-style:italic;margin-right:6px;`,
+      num: `font-family:Georgia,'SimSun',serif;color:${p};font-size:20px;font-weight:400;font-style:italic;margin-right:6px;`,
       card: `border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding:24px;margin:20px 0;text-align:center;`,
     };
   }
@@ -122,7 +122,7 @@ registerTemplate('scandinavian', {
   render(c) {
     const p = c.primary, b = c.bg;
     return {
-      body: `font-family:-apple-system,'Helvetica Neue','PingFang SC',sans-serif;color:#333;font-size:16px;line-height:2.2;background:${b};`,
+      body: `font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;color:#333;font-size:16px;line-height:2.2;background:${b};`,
       h1: `text-align:center;font-size:20px;color:${p};font-weight:300;margin:36px 0 16px;line-height:1.5;letter-spacing:8px;text-transform:uppercase;`,
       h2: `font-size:16px;color:${p};font-weight:300;margin:40px 0 14px;letter-spacing:6px;line-height:1.6;text-transform:uppercase;`,
       h3: `font-size:15px;color:#555;font-weight:400;margin:28px 0 10px;letter-spacing:3px;`,

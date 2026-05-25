@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板包13：特殊风格（下）
  * 分类：special（特殊风格）
  */
@@ -14,7 +14,7 @@ registerTemplate('mono-extreme', {
   render(c) {
     const p = c.primary, b = c.bg;
     return {
-      body: `font-family:-apple-system,'Helvetica Neue','PingFang SC',sans-serif;color:#000;font-size:16px;line-height:2;background:${b};`,
+      body: `font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;color:#000;font-size:16px;line-height:2;background:${b};`,
       h1: `text-align:center;font-size:24px;color:${p};font-weight:900;margin:28px 0 14px;line-height:1.5;letter-spacing:6px;`,
       h2: `font-size:18px;color:${p};margin:36px 0 12px;font-weight:900;line-height:1.5;text-transform:uppercase;letter-spacing:4px;`,
       h3: `font-size:16px;color:${p};margin:24px 0 10px;font-weight:800;`,
