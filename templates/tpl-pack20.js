@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板包20：设计语言（下）
  * 结构差异化设计
  */
@@ -25,6 +25,9 @@ registerTemplate('split-line', {
       img: `max-width:100%;margin:20px auto;display:block;border-radius:8px;`,
       num: `color:${p};font-size:24px;font-weight:300;margin-right:12px;font-family:Georgia,'SimSun',serif;`,
       card: `background:#fff;padding:24px;margin:20px 0;border:1px solid #e5e7eb;border-radius:8px;text-align:center;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -51,6 +54,9 @@ registerTemplate('marker-quote', {
       img: `max-width:100%;margin:16px auto;display:block;border-radius:12px;border:3px solid ${p}44;`,
       num: `background:${p};color:#fff;width:26px;height:26px;line-height:26px;text-align:center;font-size:14px;font-weight:800;margin-right:10px;border-radius:50%;display:inline-block;`,
       card: `background:#fff;padding:20px;margin:16px 0;border:2px solid ${p}33;border-radius:12px;box-shadow:0 2px 8px rgba(245,158,11,.1);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -77,6 +83,9 @@ registerTemplate('card-stack', {
       img: `max-width:100%;margin:16px auto;display:block;border-radius:14px;box-shadow:0 2px 8px rgba(139,92,246,.15);`,
       num: `background:linear-gradient(135deg,#8b5cf6,#a78bfa);color:#fff;width:26px;height:26px;line-height:26px;text-align:center;font-size:13px;font-weight:700;margin-right:10px;border-radius:8px;display:inline-block;`,
       card: `background:#fff;padding:22px;margin:16px 0;border-radius:14px;box-shadow:0 2px 8px rgba(139,92,246,.1);border:1px solid ${p}15;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -103,6 +112,9 @@ registerTemplate('sans-minimal', {
       img: `max-width:100%;margin:20px auto;display:block;border-radius:8px;`,
       num: `color:#9ca3af;font-size:24px;font-weight:300;margin-right:12px;`,
       card: `background:#f9fafb;padding:24px;margin:20px 0;border:1px solid #e5e7eb;border-radius:8px;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -129,6 +141,9 @@ registerTemplate('grad-capsule', {
       img: `max-width:100%;margin:16px auto;display:block;border-radius:20px;`,
       num: `background:linear-gradient(135deg,#f43f5e,#fb7185);color:#fff;width:28px;height:28px;line-height:28px;text-align:center;font-size:14px;font-weight:800;margin-right:10px;border-radius:50%;display:inline-block;`,
       card: `background:#fff;padding:22px;margin:16px 0;border-radius:20px;border:2px solid ${p}15;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -155,6 +170,9 @@ registerTemplate('industrial', {
       img: `max-width:100%;margin:16px auto;display:block;border:2px solid #374151;`,
       num: `background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;font-size:12px;font-weight:900;margin-right:8px;display:inline-block;`,
       card: `background:#fff;padding:20px;margin:16px 0;border:2px solid #374151;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -181,6 +199,9 @@ registerTemplate('soft-round', {
       img: `max-width:100%;margin:16px auto;display:block;border-radius:20px;`,
       num: `background:linear-gradient(135deg,#6366f1,#818cf8);color:#fff;width:28px;height:28px;line-height:28px;text-align:center;font-size:14px;font-weight:700;margin-right:10px;border-radius:12px;display:inline-block;`,
       card: `background:#fff;padding:22px;margin:16px 0;border-radius:20px;box-shadow:0 2px 12px rgba(99,102,241,.08);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -207,6 +228,9 @@ registerTemplate('stripe-bg', {
       img: `max-width:100%;margin:16px auto;display:block;border-radius:10px;`,
       num: `background:${p};color:#fff;width:26px;height:26px;line-height:26px;text-align:center;font-size:14px;font-weight:800;margin-right:10px;border-radius:6px;display:inline-block;`,
       card: `background:#fff;padding:22px;margin:16px 0;border-radius:12px;border:1px solid ${p}22;box-shadow:0 2px 8px rgba(234,88,12,.08);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

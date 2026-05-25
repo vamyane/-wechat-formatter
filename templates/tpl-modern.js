@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板：现代几何
  * 风格：圆角+渐变+阴影，适合商业/品牌
  */
@@ -23,6 +23,9 @@ registerTemplate('modern', {
       img: `max-width:100%;border-radius:14px;margin:14px auto;display:block;box-shadow:0 4px 16px rgba(0,0,0,.1);`,
       num: `display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,${p},${p}cc);color:#fff;width:28px;height:28px;border-radius:10px;font-size:14px;margin-right:10px;font-weight:700;`,
       card: `background:linear-gradient(135deg,${p}0a,${p}05);border:1px solid ${p}22;padding:24px;border-radius:16px;text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

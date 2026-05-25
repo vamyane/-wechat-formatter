@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板包6：浅色精选（下）
  * 分类：light（浅色系）
  */
@@ -26,6 +26,9 @@ registerTemplate('peach-light', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:14px;`,
       num: `display:inline-block;background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;`,
       card: `background:#fff;border:1px solid ${p}22;padding:24px;border-radius:16px;text-align:center;margin:16px 0;box-shadow:0 2px 12px rgba(255,107,157,.06);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -53,6 +56,9 @@ registerTemplate('sage', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:10px;`,
       num: `display:inline-block;background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;`,
       card: `background:#fff;border:1px solid #d4e0c8;padding:24px;border-radius:12px;text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -80,6 +86,9 @@ registerTemplate('sand', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:8px;`,
       num: `display:inline-block;background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;`,
       card: `background:#fff;border:1px solid #e0d0c0;padding:24px;border-radius:10px;text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -107,6 +116,9 @@ registerTemplate('warm-orange', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:10px;`,
       num: `display:inline-block;background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;`,
       card: `background:#fff;border:1px solid #ffe0b2;padding:24px;border-radius:12px;text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -134,6 +146,9 @@ registerTemplate('haze-blue', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:8px;`,
       num: `display:inline-block;background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;`,
       card: `background:#fff;border:1px solid #d0dde5;padding:24px;border-radius:10px;text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

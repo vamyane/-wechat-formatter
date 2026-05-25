@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板：卡片式
  * 风格：每个段落都像一张卡片，层次分明
  */
@@ -23,6 +23,9 @@ registerTemplate('card', {
       img: `max-width:100%;border-radius:10px;margin:0 auto 16px;display:block;box-shadow:0 2px 8px rgba(0,0,0,.1);`,
       num: `display:inline-block;background:${p};color:#fff;width:26px;height:26px;line-height:26px;text-align:center;border-radius:8px;font-size:13px;margin-right:10px;font-weight:700;`,
       card: `background:#fff;padding:20px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

@@ -23,6 +23,9 @@ registerTemplate('wireframe', {
       img: `max-width:100%;margin:20px auto;display:block;`,
       num: `font-size:14px;color:${p};font-weight:300;margin-right:8px;letter-spacing:2px;`,
       card: `border:1px solid #ddd;padding:24px;margin:20px 0;text-align:center;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -48,6 +51,9 @@ registerTemplate('academic', {
       img: `max-width:100%;margin:16px auto;display:block;border:1px solid #ddd;`,
       num: `font-family:Georgia,'SimSun',serif;font-size:14px;color:${p};margin-right:6px;`,
       card: `margin:16px 0;padding:16px;border:1px solid #ddd;background:#fafaf5;font-size:14px;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -73,6 +79,9 @@ registerTemplate('gold', {
       img: `max-width:100%;margin:16px auto;display:block;border:1px solid ${p}33;`,
       num: `color:${p};font-size:18px;font-weight:700;margin-right:8px;`,
       card: `border:1px solid ${p}33;padding:24px;margin:20px 0;text-align:center;background:${p}06;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -98,6 +107,9 @@ registerTemplate('pink', {
       img: `max-width:100%;border-radius:16px;margin:14px auto;display:block;`,
       num: `display:inline-block;background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;`,
       card: `background:#fff;border:1px solid ${p}22;padding:24px;border-radius:16px;text-align:center;margin:16px 0;box-shadow:0 2px 12px ${p}11;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -123,6 +135,9 @@ registerTemplate('cyber', {
       img: `max-width:100%;margin:14px auto;display:block;border:1px solid ${p}33;`,
       num: `color:#ff2d55;font-family:monospace;font-size:16px;font-weight:700;margin-right:8px;`,
       card: `border:1px solid ${p}33;background:#111122;padding:20px;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

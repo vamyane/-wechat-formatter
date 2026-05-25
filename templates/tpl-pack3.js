@@ -23,6 +23,9 @@ registerTemplate('redblack', {
       img: `max-width:100%;margin:14px auto;display:block;`,
       num: `display:inline-block;background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;font-size:13px;margin-right:8px;font-weight:700;`,
       card: `border:2px solid ${p};padding:24px;margin:16px 0;text-align:center;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -48,6 +51,9 @@ registerTemplate('aurora', {
       img: `max-width:100%;border-radius:12px;margin:14px auto;display:block;`,
       num: `display:inline-block;background:linear-gradient(135deg,${p},#00b894);color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;`,
       card: `background:linear-gradient(135deg,${p}06,#00b89406);border:1px solid ${p}11;padding:24px;border-radius:12px;text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -73,6 +79,9 @@ registerTemplate('typewriter', {
       img: `max-width:100%;margin:14px auto;display:block;border:2px solid #ccc;`,
       num: `font-family:monospace;color:${p};font-size:16px;font-weight:700;margin-right:8px;`,
       card: `border:2px solid #ccc;padding:20px;margin:16px 0;background:#faf5e8;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -98,6 +107,9 @@ registerTemplate('metal', {
       img: `max-width:100%;margin:14px auto;display:block;border:1px solid #444;`,
       num: `color:${p};font-size:16px;font-weight:700;margin-right:8px;`,
       card: `border:1px solid #444;background:#252525;padding:20px;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -123,6 +135,9 @@ registerTemplate('ink', {
       img: `max-width:100%;margin:20px auto;display:block;`,
       num: `color:${p};font-size:18px;font-weight:400;margin-right:6px;`,
       card: `border:1px solid #ddd;padding:24px;margin:20px 0;text-align:center;background:#fff;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

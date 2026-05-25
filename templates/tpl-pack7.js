@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板包7：深色主题
  * 分类：dark（深色系）
  */
@@ -26,6 +26,9 @@ registerTemplate('deep-navy', {
       img: `max-width:100%;margin:14px auto;display:block;border:1px solid #1a2a3a;border-radius:6px;`,
       num: `display:inline-block;background:${p};color:#000;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;font-weight:700;`,
       card: `background:#111a28;border:1px solid ${p}22;padding:24px;border-radius:8px;text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -53,6 +56,9 @@ registerTemplate('charcoal', {
       img: `max-width:100%;margin:14px auto;display:block;`,
       num: `color:${p};font-size:16px;font-weight:300;margin-right:8px;letter-spacing:2px;`,
       card: `background:#222;border:1px solid #333;padding:24px;margin:16px 0;text-align:center;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -80,6 +86,9 @@ registerTemplate('midnight', {
       img: `max-width:100%;margin:14px auto;display:block;border:1px solid ${p}22;border-radius:6px;`,
       num: `color:${p};font-size:18px;font-weight:700;margin-right:8px;`,
       card: `background:#1a0040;border:1px solid ${p}22;padding:24px;margin:16px 0;text-align:center;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -107,6 +116,9 @@ registerTemplate('forest-dark', {
       img: `max-width:100%;margin:14px auto;display:block;border:1px solid #1a2a1a;border-radius:6px;`,
       num: `display:inline-block;background:${p};color:#000;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;font-weight:700;`,
       card: `background:#111a11;border:1px solid ${p}22;padding:24px;border-radius:8px;text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -134,6 +146,9 @@ registerTemplate('wine-dark', {
       img: `max-width:100%;margin:14px auto;display:block;border:1px solid ${p}22;border-radius:6px;`,
       num: `color:${p};font-size:18px;font-weight:700;margin-right:8px;`,
       card: `background:#200a0e;border:1px solid ${p}22;padding:24px;margin:16px 0;text-align:center;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -161,6 +176,9 @@ registerTemplate('slate-dark', {
       img: `max-width:100%;margin:14px auto;display:block;border:1px solid #2a3038;border-radius:4px;`,
       num: `color:${p};font-size:16px;font-weight:700;margin-right:8px;`,
       card: `background:#222830;border:1px solid #2a3038;padding:24px;margin:16px 0;text-align:center;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

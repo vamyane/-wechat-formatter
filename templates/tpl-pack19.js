@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板包19：经典设计语言
  * 每个模板引用真实设计体系，结构完全不同
  */
@@ -27,6 +27,9 @@ registerTemplate('material-card', {
       img: `max-width:100%;margin:16px auto;display:block;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.2);`,
       num: `background:${p};color:#fff;width:28px;height:28px;line-height:28px;text-align:center;font-size:14px;font-weight:500;margin-right:10px;border-radius:50%;display:inline-block;box-shadow:0 2px 4px rgba(0,0,0,.2);`,
       card: `background:#fff;padding:24px;margin:16px 0;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -53,6 +56,9 @@ registerTemplate('material-flat', {
       img: `max-width:100%;margin:16px auto;display:block;`,
       num: `background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;font-size:13px;font-weight:500;margin-right:8px;display:inline-block;`,
       card: `background:#fff;padding:20px;margin:16px 0;border:1px solid #e0e0e0;border-radius:4px;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -81,6 +87,9 @@ registerTemplate('apple-clean', {
       img: `max-width:100%;margin:24px auto;display:block;border-radius:16px;`,
       num: `color:#86868b;font-size:28px;font-weight:300;margin-right:16px;`,
       card: `padding:32px;margin:24px 0;background:#f5f5f7;border-radius:20px;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -107,6 +116,9 @@ registerTemplate('apple-dark', {
       img: `max-width:100%;margin:24px auto;display:block;border-radius:16px;`,
       num: `color:#86868b;font-size:28px;font-weight:300;margin-right:16px;`,
       card: `padding:32px;margin:24px 0;background:#1d1d1f;border-radius:20px;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -135,6 +147,9 @@ registerTemplate('capsule-tag', {
       img: `max-width:100%;margin:16px auto;display:block;border-radius:16px;`,
       num: `background:linear-gradient(135deg,${p},${p}cc);color:#fff;width:26px;height:26px;line-height:26px;text-align:center;font-size:13px;font-weight:700;margin-right:10px;border-radius:50%;display:inline-block;`,
       card: `background:#fff;padding:20px;margin:16px 0;border-radius:16px;border:2px solid ${p}15;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -161,6 +176,9 @@ registerTemplate('left-bar', {
       img: `max-width:100%;margin:16px auto;display:block;border-radius:8px;`,
       num: `background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;font-size:13px;font-weight:700;margin-right:10px;border-radius:4px;display:inline-block;`,
       card: `background:#fff;padding:20px;margin:16px 0;border-left:5px solid ${p};border-radius:0 8px 8px 0;box-shadow:0 1px 3px rgba(0,0,0,.1);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -187,6 +205,9 @@ registerTemplate('double-border', {
       img: `max-width:100%;margin:16px auto;display:block;border:1px solid #e2e8f0;`,
       num: `font-family:Georgia,'SimSun',serif;color:${p};font-size:22px;font-weight:700;margin-right:10px;`,
       card: `background:#fff;padding:24px;margin:16px 0;border:2px double ${p}33;border-radius:4px;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -213,6 +234,9 @@ registerTemplate('gradient-underline', {
       img: `max-width:100%;margin:16px auto;display:block;border-radius:12px;`,
       num: `background:linear-gradient(135deg,#ec4899,#8b5cf6);color:#fff;width:26px;height:26px;line-height:26px;text-align:center;font-size:13px;font-weight:700;margin-right:10px;border-radius:50%;display:inline-block;`,
       card: `background:#fff;padding:24px;margin:16px 0;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,.1);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -239,6 +263,9 @@ registerTemplate('badge-style', {
       img: `max-width:100%;margin:16px auto;display:block;border-radius:12px;`,
       num: `background:${p};color:#fff;width:28px;height:28px;line-height:28px;text-align:center;font-size:14px;font-weight:700;margin-right:10px;border-radius:8px;display:inline-block;`,
       card: `background:#fff;padding:22px;margin:16px 0;border-radius:16px;border:1px solid #d1fae5;box-shadow:0 2px 8px rgba(5,150,105,.06);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -265,6 +292,9 @@ registerTemplate('vignette-card', {
       img: `max-width:100%;margin:16px auto;display:block;border-radius:8px;border:1px solid #44403c;`,
       num: `background:${p};color:#1c1917;width:26px;height:26px;line-height:26px;text-align:center;font-size:14px;font-weight:800;margin-right:10px;border-radius:6px;display:inline-block;`,
       card: `background:#292524;padding:22px;margin:16px 0;border-radius:12px;border:1px solid #44403c;box-shadow:inset 0 2px 4px rgba(0,0,0,.3);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -291,6 +321,9 @@ registerTemplate('grid-pattern', {
       img: `max-width:100%;margin:16px auto;display:block;border-radius:8px;`,
       num: `background:${p};color:#fff;width:26px;height:26px;line-height:26px;text-align:center;font-size:13px;font-weight:700;margin-right:10px;border-radius:6px;display:inline-block;`,
       card: `background:#fff;padding:22px;margin:16px 0;border:2px solid ${p}22;border-radius:10px;box-shadow:0 2px 8px rgba(37,99,235,.08);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

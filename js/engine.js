@@ -246,6 +246,14 @@ function applyTemplateStyles(html, tplId, colors) {
     if (textColor) e.style.color = textColor;
   });
 
+  // 列表样式
+  if (s.ul) tmp.querySelectorAll('ul').forEach(e => e.setAttribute('style', s.ul));
+  if (s.ol) tmp.querySelectorAll('ol').forEach(e => e.setAttribute('style', s.ol));
+  if (s.li) tmp.querySelectorAll('li').forEach(e => {
+    e.setAttribute('style', s.li);
+    if (textColor) e.style.color = textColor;
+  });
+
   // 应用表格样式（使用表格样式系统）
   const tableTplId = window.curTableTpl || 'tbl-clean';
   const tableTpl = window.TABLE_TEMPLATES ? window.TABLE_TEMPLATES[tableTplId] : null;

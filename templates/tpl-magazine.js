@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板：杂志风
  * 风格：衬线字体+粗分割线，适合深度长文
  */
@@ -23,6 +23,9 @@ registerTemplate('magazine', {
       img: `max-width:100%;margin:20px auto;display:block;`,
       num: `font-family:Georgia,serif;font-size:28px;color:${p};font-weight:900;margin-right:6px;font-style:italic;`,
       card: `border-top:3px solid ${p};border-bottom:3px solid ${p};padding:24px;margin:24px 0;text-align:center;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

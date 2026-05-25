@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板：复古文艺
  * 风格：泛黄纸张感，适合散文/随笔
  */
@@ -23,6 +23,9 @@ registerTemplate('vintage', {
       img: `max-width:100%;margin:18px auto;display:block;border:3px solid #e8dcc8;padding:4px;background:#fff;`,
       num: `font-family:Georgia,serif;font-size:22px;color:${p};font-weight:900;margin-right:6px;font-style:italic;`,
       card: `border:1px solid #d4c5a0;background:#faf5e8;padding:24px;border-radius:6px;text-align:center;margin:18px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

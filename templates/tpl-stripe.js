@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板：色块条纹
  * 风格：标题带色块背景条，视觉冲击力强
  */
@@ -23,6 +23,9 @@ registerTemplate('stripe', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:4px;`,
       num: `display:inline-block;background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:4px;font-size:13px;margin-right:8px;font-weight:700;`,
       card: `background:${p}0a;border:1px solid ${p}33;padding:24px;border-radius:8px;text-align:center;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板包9：边框装饰
  * 分类：border（边框装饰）
  */
@@ -26,6 +26,9 @@ registerTemplate('double-frame', {
       img: `max-width:100%;margin:14px auto;display:block;border:2px solid #ddd;`,
       num: `display:inline-block;border:1px solid ${p};color:${p};width:24px;height:24px;line-height:24px;text-align:center;font-size:13px;margin-right:8px;font-weight:600;`,
       card: `border:3px double #ccc;padding:24px;margin:16px 0;text-align:center;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -53,6 +56,9 @@ registerTemplate('soft-round', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:20px;box-shadow:0 4px 16px rgba(124,77,255,.08);`,
       num: `display:inline-block;background:#f0e8ff;color:${p};width:28px;height:28px;line-height:28px;text-align:center;border-radius:50%;font-size:14px;margin-right:8px;font-weight:700;`,
       card: `background:#fff;border:1px solid #e0d0f0;padding:24px;border-radius:20px;text-align:center;margin:16px 0;box-shadow:0 2px 12px rgba(124,77,255,.06);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -80,6 +86,9 @@ registerTemplate('dashed-frame', {
       img: `max-width:100%;margin:14px auto;display:block;border:2px dashed #ddd;border-radius:8px;`,
       num: `display:inline-block;border:1px dashed ${p};color:${p};width:24px;height:24px;line-height:24px;text-align:center;font-size:13px;margin-right:8px;border-radius:50%;font-weight:600;`,
       card: `border:2px dashed #ddd;padding:24px;margin:16px 0;text-align:center;border-radius:12px;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -107,6 +116,9 @@ registerTemplate('shadow-card', {
       img: `max-width:100%;margin:0 auto 14px;display:block;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.1);`,
       num: `display:inline-flex;align-items:center;justify-content:center;background:${p};color:#fff;width:28px;height:28px;border-radius:10px;font-size:14px;margin-right:10px;font-weight:700;`,
       card: `background:#fff;padding:24px;border-radius:14px;text-align:center;margin:16px 0;box-shadow:0 4px 20px rgba(0,0,0,.08);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -134,6 +146,9 @@ registerTemplate('elegant-frame', {
       img: `max-width:100%;margin:18px auto;display:block;border:3px solid #e0d5c5;padding:4px;background:#fff;`,
       num: `color:${p};font-size:20px;font-weight:700;margin-right:6px;font-style:italic;`,
       card: `border:2px solid ${p}44;padding:24px;margin:20px 0;text-align:center;background:#fff;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -161,6 +176,9 @@ registerTemplate('tape-style', {
       img: `max-width:100%;margin:14px auto;display:block;border:3px solid #e8dcc8;padding:4px;background:#fff;transform:rotate(0.5deg);`,
       num: `display:inline-block;background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;`,
       card: `background:#fff;border:1px solid #e8dcc8;padding:24px;margin:16px 0;text-align:center;transform:rotate(-0.5deg);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

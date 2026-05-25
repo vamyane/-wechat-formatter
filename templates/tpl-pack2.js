@@ -23,6 +23,9 @@ registerTemplate('chinese', {
       img: `max-width:100%;margin:20px auto;display:block;border:2px solid #e8dcc8;padding:4px;background:#fff;`,
       num: `color:${p};font-size:20px;font-weight:700;margin-right:6px;`,
       card: `border:1px solid ${p}33;background:${p}06;padding:24px;margin:20px 0;text-align:center;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -48,6 +51,9 @@ registerTemplate('handwrite', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:4px;transform:rotate(-1deg);`,
       num: `color:${p};font-size:18px;margin-right:6px;font-style:italic;`,
       card: `background:#fff;border:1px dashed ${p}44;padding:20px;margin:16px 0;border-radius:4px;transform:rotate(0.5deg);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -73,6 +79,9 @@ registerTemplate('newspaper', {
       img: `max-width:100%;margin:16px auto;display:block;`,
       num: `font-family:Georgia,'SimSun',serif;font-size:24px;color:${p};font-weight:900;margin-right:6px;`,
       card: `border:2px solid ${p};padding:20px;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -98,6 +107,9 @@ registerTemplate('mint', {
       img: `max-width:100%;border-radius:14px;margin:14px auto;display:block;`,
       num: `display:inline-block;background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;`,
       card: `background:#fff;border:1px solid ${p}22;padding:24px;border-radius:14px;text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -123,6 +135,9 @@ registerTemplate('muji', {
       img: `max-width:100%;margin:24px auto;display:block;`,
       num: `color:${p};font-size:14px;font-weight:300;margin-right:8px;letter-spacing:2px;`,
       card: `padding:24px;margin:24px 0;text-align:center;border-top:1px solid #eee;border-bottom:1px solid #eee;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

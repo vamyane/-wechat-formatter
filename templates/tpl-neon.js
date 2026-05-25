@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板：暗黑霓虹
  * 风格：深色底+亮色文字，适合科技/潮流
  */
@@ -23,6 +23,9 @@ registerTemplate('neon', {
       img: `max-width:100%;border-radius:6px;margin:14px auto;display:block;border:1px solid #222;`,
       num: `display:inline-block;background:${p};color:#000;width:22px;height:22px;line-height:22px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;font-weight:700;`,
       card: `background:#111;border:1px solid ${p}33;padding:24px;border-radius:10px;text-align:center;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

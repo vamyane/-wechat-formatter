@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板包：糖果色 / 哥特暗黑 / 清新插画 / 商务蓝 / 像素复古
  */
 
@@ -23,6 +23,9 @@ registerTemplate('candy', {
       img: `max-width:100%;border-radius:16px;margin:14px auto;display:block;`,
       num: `display:inline-block;background:linear-gradient(135deg,#fd79a8,#fdcb6e);color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;`,
       card: `background:#fff;border:1px solid #f0e0e8;padding:24px;border-radius:16px;text-align:center;margin:16px 0;box-shadow:0 2px 12px rgba(253,121,168,.08);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -48,6 +51,9 @@ registerTemplate('gothic', {
       img: `max-width:100%;margin:16px auto;display:block;border:1px solid #333;`,
       num: `color:${p};font-size:20px;font-weight:700;margin-right:6px;`,
       card: `border:1px solid #333;background:#111;padding:24px;margin:20px 0;text-align:center;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -73,6 +79,9 @@ registerTemplate('illustration', {
       img: `max-width:100%;border-radius:14px;margin:14px auto;display:block;box-shadow:0 4px 16px rgba(0,0,0,.08);`,
       num: `display:inline-flex;align-items:center;justify-content:center;background:${p};color:#fff;width:28px;height:28px;border-radius:10px;font-size:14px;margin-right:10px;font-weight:700;`,
       card: `background:#fff;padding:24px;border-radius:16px;text-align:center;margin:16px 0;box-shadow:0 4px 16px rgba(52,152,219,.1);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -98,6 +107,9 @@ registerTemplate('bizblue', {
       img: `max-width:100%;margin:14px auto;display:block;`,
       num: `display:inline-block;background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:4px;font-size:13px;margin-right:8px;font-weight:700;`,
       card: `background:#f5f8fb;border:1px solid #e0e8f0;padding:24px;margin:16px 0;text-align:center;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -123,6 +135,9 @@ registerTemplate('pixel', {
       img: `max-width:100%;margin:14px auto;display:block;border:2px solid #555;`,
       num: `color:${p};font-family:monospace;font-size:16px;font-weight:700;margin-right:8px;`,
       card: `border:2px solid #555;background:#222233;padding:20px;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

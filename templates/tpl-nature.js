@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板：自然有机
  * 风格：圆润+大地色，适合生活方式/自然
  */
@@ -23,6 +23,9 @@ registerTemplate('nature', {
       img: `max-width:100%;border-radius:16px;margin:14px auto;display:block;`,
       num: `display:inline-block;background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;`,
       card: `background:#eef2e6;border:1px solid #d4e0c8;padding:24px;border-radius:16px;text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ═══════════════════════════════════════
  * 公众号排版器 Pro v2 - 主应用逻辑
  * ═══════════════════════════════════════
@@ -165,13 +165,22 @@ function quickIns(v) {
       h = `<div class="card" style="${s.card}"><p style="margin:0 0 8px;font-size:16px;font-weight:700;color:${colors.primary}">觉得有用就点个「在看」吧 👇</p><p style="margin:0;font-size:14px;color:#888">你的支持是我最大的动力 ❤️</p></div><p><br></p>`;
       break;
     case 'author':
-      h = `<p style="font-size:13px;color:#aaa;margin:20px 0 0;text-align:center;border-top:1px solid #eee;padding-top:12px">作者：___ ｜ 编辑：___ ｜ 转载请联系授权</p><p><br></p>`;
+      h = `<p style="font-size:13px;color:#999;margin:20px 0 0;text-align:center;border-top:1px solid ${colors.primary}33;padding-top:12px">作者：___ ｜ 编辑：___ ｜ 转载请联系授权</p><p><br></p>`;
       break;
     case 'tips':
       h = `<blockquote style="${s.quote}">💡 <strong style="${s.strong}">小提示：</strong>在这里写提示内容</blockquote><p><br></p>`;
       break;
+    case 'warning':
+      h = `<div class="card" style="${s.card};border-left:4px solid #f59e0b">⚠️ <strong style="color:#f59e0b;font-weight:700">注意：</strong><span style="color:inherit">在这里写注意事项</span></div><p><br></p>`;
+      break;
     case 'nums':
       h = `<p style="${s.p}"><span class="nm" style="${s.num}">1</span>第一点内容</p><p style="${s.p}"><span class="nm" style="${s.num}">2</span>第二点内容</p><p style="${s.p}"><span class="nm" style="${s.num}">3</span>第三点内容</p><p><br></p>`;
+      break;
+    case 'list':
+      h = `<ul style="${s.ul || 'margin:14px 0;padding-left:24px;list-style:disc'}"><li style="${s.li || 'margin:6px 0;line-height:2'}">第一项内容</li><li style="${s.li || 'margin:6px 0;line-height:2'}">第二项内容</li><li style="${s.li || 'margin:6px 0;line-height:2'}">第三项内容</li></ul><p><br></p>`;
+      break;
+    case 'olist':
+      h = `<ol style="${s.ol || 'margin:14px 0;padding-left:24px;list-style:decimal'}"><li style="${s.li || 'margin:6px 0;line-height:2'}">第一项内容</li><li style="${s.li || 'margin:6px 0;line-height:2'}">第二项内容</li><li style="${s.li || 'margin:6px 0;line-height:2'}">第三项内容</li></ol><p><br></p>`;
       break;
     case 'imgtext':
       h = `<table style="width:100%;margin:16px 0;border-collapse:collapse"><tr><td style="width:45%;vertical-align:top;padding-right:12px"><img src="https://placehold.co/300x200/e8e8e8/999?text=图片" style="${s.img}"></td><td style="vertical-align:top;font-size:15px;line-height:1.8;color:#555">在这里写图片说明文字</td></tr></table><p><br></p>`;

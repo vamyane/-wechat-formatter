@@ -25,6 +25,9 @@ registerTemplate('pixel-game', {
       img: `max-width:100%;margin:14px auto;display:block;border:3px solid #444;image-rendering:pixelated;`,
       num: `display:inline-block;background:${p};color:#fff;width:20px;height:20px;line-height:20px;text-align:center;font-size:10px;margin-right:8px;font-family:monospace;`,
       card: `background:#16213e;border:2px solid #444;padding:16px;margin:14px 0;box-shadow:4px 4px 0 #0a0a14;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -51,6 +54,9 @@ registerTemplate('wabi-sabi', {
       img: `max-width:80%;margin:24px auto;display:block;`,
       num: `font-size:18px;color:#bbb;font-weight:300;margin-right:16px;letter-spacing:4px;`,
       card: `border:none;padding:32px;margin:24px 0;background:transparent;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -77,6 +83,9 @@ registerTemplate('neon-gradient', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:12px;border:1px solid #ffffff11;`,
       num: `display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#ff006e,#8800ff);color:#fff;width:26px;height:26px;border-radius:50%;font-size:13px;font-weight:700;margin-right:10px;`,
       card: `background:#ffffff06;border:1px solid #ffffff11;border-radius:16px;padding:22px;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -103,6 +112,9 @@ registerTemplate('coffee-menu', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:12px;`,
       num: `display:inline-block;color:${p};font-size:20px;font-weight:700;margin-right:10px;font-family:Georgia,'SimSun',serif;`,
       card: `background:#fff;border:1px solid #d8c8b0;padding:24px;margin:16px 0;border-radius:12px;box-shadow:0 2px 8px rgba(92,61,46,.06);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -129,6 +141,9 @@ registerTemplate('tech-dashboard', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:6px;border:1px solid #30363d;`,
       num: `display:inline-block;background:${p};color:#0d1117;width:24px;height:24px;line-height:24px;text-align:center;font-size:12px;font-weight:700;margin-right:8px;border-radius:4px;font-family:monospace;`,
       card: `background:#161b22;border:1px solid #30363d;padding:20px;margin:14px 0;border-radius:8px;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -155,6 +170,9 @@ registerTemplate('garden', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:16px;`,
       num: `display:inline-flex;align-items:center;justify-content:center;background:#52b788;color:#fff;width:26px;height:26px;border-radius:50%;font-size:13px;font-weight:700;margin-right:10px;`,
       card: `background:#fff;border:1px solid #b7e4c7;padding:24px;margin:16px 0;border-radius:16px;box-shadow:0 2px 12px rgba(45,106,79,.06);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -181,6 +199,9 @@ registerTemplate('cosmos', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:12px;border:1px solid ${p}22;`,
       num: `display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#a78bfa,#7c3aed);color:#fff;width:26px;height:26px;border-radius:50%;font-size:13px;font-weight:700;margin-right:10px;`,
       card: `background:#ffffff06;border:1px solid ${p}22;border-radius:16px;padding:22px;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -207,6 +228,9 @@ registerTemplate('candy-pop', {
       img: `max-width:100%;margin:14px auto;display:block;border:4px solid ${p};border-radius:0;`,
       num: `display:inline-flex;align-items:center;justify-content:center;background:${p};color:#fff;width:28px;height:28px;font-size:14px;font-weight:900;margin-right:10px;clip-path:polygon(4px 0,100% 0,calc(100% - 4px) 100%,0 100%);`,
       card: `background:#fff;border:3px solid #333;padding:22px;margin:16px 0;box-shadow:6px 6px 0 ${p};`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -233,6 +257,9 @@ registerTemplate('guochao', {
       img: `max-width:100%;margin:14px auto;display:block;border:3px solid #daa520;border-radius:4px;`,
       num: `display:inline-flex;align-items:center;justify-content:center;background:${p};color:#ffd700;width:26px;height:26px;border-radius:50%;font-size:14px;font-weight:900;margin-right:10px;border:2px solid #daa520;`,
       card: `background:#fff;border:2px solid #daa520;padding:24px;margin:16px 0;border-radius:4px;box-shadow:0 0 0 4px ${p}11;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -259,6 +286,9 @@ registerTemplate('aurora', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:12px;border:1px solid #ffffff11;`,
       num: `display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#00c9a7,#9b5de5);color:#fff;width:26px;height:26px;border-radius:50%;font-size:13px;font-weight:700;margin-right:10px;`,
       card: `background:#ffffff06;border:1px solid #ffffff11;border-radius:16px;padding:22px;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

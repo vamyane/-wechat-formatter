@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板包18：复杂精品 - 功能型
  * 公众号兼容样式
  */
@@ -25,6 +25,9 @@ registerTemplate('data-dash', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:6px;border:1px solid #30363d;`,
       num: `background:${p};color:#0d1117;width:24px;height:24px;line-height:24px;text-align:center;font-size:12px;font-weight:700;margin-right:8px;border-radius:4px;display:inline-block;`,
       card: `background:#161b22;border:1px solid #30363d;padding:20px;margin:14px 0;border-radius:8px;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -51,6 +54,9 @@ registerTemplate('glitch2', {
       img: `max-width:100%;margin:14px auto;display:block;border:1px solid #333;`,
       num: `background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;font-size:12px;font-weight:800;margin-right:8px;display:inline-block;`,
       card: `background:#12121c;border:1px solid #2a2a3a;padding:20px;margin:16px 0;box-shadow:0 0 20px ${p}08;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -77,6 +83,9 @@ registerTemplate('deep-ocean', {
       img: `max-width:100%;margin:14px auto;display:block;border:1px solid #1a2a3a;border-radius:6px;`,
       num: `background:${p};color:#000;width:24px;height:24px;line-height:24px;text-align:center;font-size:13px;font-weight:700;margin-right:8px;border-radius:50%;display:inline-block;`,
       card: `background:#111a28;border:1px solid ${p}22;padding:24px;margin:16px 0;border-radius:8px;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -103,6 +112,9 @@ registerTemplate('midnight2', {
       img: `max-width:100%;margin:14px auto;display:block;border:1px solid ${p}22;border-radius:6px;`,
       num: `background:linear-gradient(135deg,#bb86fc,#7c3aed);color:#fff;width:26px;height:26px;line-height:26px;text-align:center;font-size:13px;font-weight:700;margin-right:10px;border-radius:50%;display:inline-block;`,
       card: `background:#ffffff06;border:1px solid ${p}22;border-radius:16px;padding:22px;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -129,6 +141,9 @@ registerTemplate('sunset2', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:12px;`,
       num: `background:linear-gradient(135deg,#ff6b6b,#ffa07a);color:#fff;width:24px;height:24px;line-height:24px;text-align:center;font-size:13px;margin-right:8px;border-radius:50%;display:inline-block;`,
       card: `background:linear-gradient(135deg,#ff6b6b06,#ffa07a06);border:1px solid #ff6b6b11;padding:24px;margin:16px 0;border-radius:14px;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -155,6 +170,9 @@ registerTemplate('ocean2', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:12px;`,
       num: `background:linear-gradient(135deg,#0097a7,#00bcd4);color:#fff;width:24px;height:24px;line-height:24px;text-align:center;font-size:13px;margin-right:8px;border-radius:50%;display:inline-block;`,
       card: `background:linear-gradient(135deg,#0097a706,#00bcd406);border:1px solid ${p}11;padding:24px;margin:16px 0;border-radius:14px;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -181,6 +199,9 @@ registerTemplate('berry2', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:14px;`,
       num: `background:linear-gradient(135deg,#e040fb,#ff80ab);color:#fff;width:24px;height:24px;line-height:24px;text-align:center;font-size:13px;margin-right:8px;border-radius:50%;display:inline-block;`,
       card: `background:#fff;border:1px solid #f0c0e0;padding:24px;margin:16px 0;border-radius:16px;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -207,6 +228,9 @@ registerTemplate('glacier2', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:14px;box-shadow:0 8px 24px rgba(14,165,233,.15);`,
       num: `background:linear-gradient(135deg,#0ea5e9,#38bdf8);color:#fff;width:26px;height:26px;line-height:26px;text-align:center;font-size:13px;font-weight:700;margin-right:10px;border-radius:50%;display:inline-block;`,
       card: `background:linear-gradient(135deg,#e0f2fe88,#f0f9ff);border:1px solid #bae6fd;padding:22px;margin:16px 0;border-radius:16px;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -233,6 +257,9 @@ registerTemplate('mint-fresh', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:12px;`,
       num: `background:linear-gradient(135deg,#00bfa5,#64ffda);color:#fff;width:24px;height:24px;line-height:24px;text-align:center;font-size:13px;margin-right:8px;border-radius:50%;display:inline-block;`,
       card: `background:#fff;border:1px solid #b2dfdb;padding:24px;margin:16px 0;border-radius:14px;box-shadow:0 2px 12px rgba(0,191,165,.06);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

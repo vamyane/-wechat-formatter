@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板包14：特殊风格（续）
  * 分类：special（特殊风格）
  */
@@ -26,6 +26,9 @@ registerTemplate('origami', {
       img: `max-width:100%;margin:14px auto;display:block;`,
       num: `display:inline-block;background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;font-size:13px;margin-right:8px;font-weight:700;`,
       card: `background:#fff;border:2px solid ${p};padding:24px;margin:16px 0;text-align:center;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -53,6 +56,9 @@ registerTemplate('glass', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:16px;`,
       num: `display:inline-block;background:rgba(99,102,241,0.15);color:${p};width:28px;height:28px;line-height:28px;text-align:center;border-radius:10px;font-size:14px;margin-right:8px;font-weight:700;`,
       card: `background:rgba(255,255,255,0.5);border:1px solid rgba(99,102,241,0.15);padding:24px;border-radius:18px;text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -80,6 +86,9 @@ registerTemplate('brutalist', {
       img: `max-width:100%;margin:14px auto;display:block;border:3px solid #000;`,
       num: `color:${p};font-size:18px;font-weight:900;margin-right:8px;`,
       card: `border:3px solid #000;padding:20px;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -107,6 +116,9 @@ registerTemplate('emoji-pop', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:16px;`,
       num: `display:inline-block;background:${p};color:#fff;width:26px;height:26px;line-height:26px;text-align:center;border-radius:50%;font-size:14px;margin-right:8px;`,
       card: `background:#fff;border:1px solid ${p}22;padding:24px;border-radius:18px;text-align:center;margin:16px 0;box-shadow:0 2px 12px rgba(255,152,0,.06);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -134,6 +146,9 @@ registerTemplate('aurora-night', {
       img: `max-width:100%;margin:14px auto;display:block;border:1px solid #1a1a30;border-radius:8px;`,
       num: `color:#00e676;font-size:16px;font-weight:700;margin-right:8px;`,
       card: `background:#0a0a28;border:1px solid #1a1a40;padding:24px;margin:16px 0;text-align:center;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

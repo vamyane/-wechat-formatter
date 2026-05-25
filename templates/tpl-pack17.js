@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板包17：复杂精品 - 杂志感
  * 公众号兼容样式，无外部字体依赖
  */
@@ -25,6 +25,9 @@ registerTemplate('mag-cover', {
       img: `max-width:100%;margin:20px auto;display:block;`,
       num: `font-family:Georgia,'SimSun',serif;font-size:28px;color:${p};font-weight:700;margin-right:12px;font-style:italic;`,
       card: `background:#fff;border:1px solid #e0e0e0;padding:28px;margin:20px 0;box-shadow:2px 2px 0 ${p}22;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -51,6 +54,9 @@ registerTemplate('news-column', {
       img: `max-width:100%;margin:16px auto;display:block;`,
       num: `font-family:Georgia,'SimSun',serif;font-size:24px;color:${p};font-weight:700;margin-right:10px;`,
       card: `background:#fff;border:1px solid #d0c8b8;padding:24px;margin:16px 0;box-shadow:3px 3px 0 #e0d8c8;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -77,6 +83,9 @@ registerTemplate('minimal-wire', {
       img: `max-width:100%;margin:24px auto;display:block;`,
       num: `font-size:32px;color:${p};font-weight:100;margin-right:16px;letter-spacing:2px;`,
       card: `border:1px solid ${p};padding:32px;margin:24px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -103,6 +112,9 @@ registerTemplate('coffee-menu2', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:12px;`,
       num: `color:${p};font-size:20px;font-weight:700;margin-right:10px;font-family:Georgia,'SimSun',serif;`,
       card: `background:#fff;border:1px solid #d8c8b0;padding:24px;margin:16px 0;border-radius:12px;box-shadow:0 2px 8px rgba(92,61,46,.06);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -129,6 +141,9 @@ registerTemplate('ink-mood', {
       img: `max-width:100%;margin:24px auto;display:block;opacity:.9;`,
       num: `font-size:22px;color:#999;font-weight:300;margin-right:12px;letter-spacing:2px;`,
       card: `border:1px solid #d8d0c0;padding:28px;margin:20px 0;background:#fdfaf4;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -155,6 +170,9 @@ registerTemplate('film-retro', {
       img: `max-width:100%;margin:14px auto;display:block;border:6px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.15);`,
       num: `color:${p};font-size:20px;font-weight:700;margin-right:8px;font-family:Georgia,'SimSun',serif;`,
       card: `background:#faf5e8;border:1px solid #d8c8a8;padding:24px;margin:16px 0;box-shadow:2px 2px 0 #e8dcc8;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -181,6 +199,9 @@ registerTemplate('guochao2', {
       img: `max-width:100%;margin:14px auto;display:block;border:3px solid #daa520;border-radius:4px;`,
       num: `background:${p};color:#ffd700;width:26px;height:26px;line-height:26px;text-align:center;font-size:14px;font-weight:900;margin-right:10px;border-radius:50%;display:inline-block;border:2px solid #daa520;`,
       card: `background:#fff;border:2px solid #daa520;padding:24px;margin:16px 0;border-radius:4px;box-shadow:0 0 0 4px ${p}11;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -207,6 +228,9 @@ registerTemplate('candy-pop2', {
       img: `max-width:100%;margin:14px auto;display:block;border:4px solid ${p};border-radius:0;`,
       num: `background:${p};color:#fff;width:28px;height:28px;line-height:28px;font-size:14px;font-weight:900;margin-right:10px;display:inline-block;text-align:center;`,
       card: `background:#fff;border:3px solid #333;padding:22px;margin:16px 0;box-shadow:6px 6px 0 ${p};`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -233,6 +257,9 @@ registerTemplate('wabi-sabi2', {
       img: `max-width:80%;margin:24px auto;display:block;`,
       num: `font-size:18px;color:#bbb;font-weight:300;margin-right:16px;letter-spacing:4px;`,
       card: `padding:32px;margin:24px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -259,6 +286,9 @@ registerTemplate('blueprint', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:6px;border:1px solid ${p}22;`,
       num: `background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;font-size:13px;font-weight:700;margin-right:8px;border-radius:4px;display:inline-block;`,
       card: `background:#fff;border:1px solid ${p}22;padding:20px;margin:14px 0;border-radius:8px;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

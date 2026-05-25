@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 模板包8：渐变风格
  * 分类：gradient（渐变风）
  */
@@ -26,6 +26,9 @@ registerTemplate('sunset-grad', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:12px;`,
       num: `display:inline-block;background:linear-gradient(135deg,#ff6b6b,#ffa07a);color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;`,
       card: `background:linear-gradient(135deg,#ff6b6b06,#ffa07a06);border:1px solid #ff6b6b11;padding:24px;border-radius:14px;text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -53,6 +56,9 @@ registerTemplate('ocean-grad', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:12px;`,
       num: `display:inline-block;background:linear-gradient(135deg,#0097a7,#00bcd4);color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;`,
       card: `background:linear-gradient(135deg,#0097a706,#00bcd406);border:1px solid ${p}11;padding:24px;border-radius:14px;text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -80,6 +86,9 @@ registerTemplate('berry-grad', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:14px;`,
       num: `display:inline-block;background:linear-gradient(135deg,#e040fb,#ff80ab);color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;`,
       card: `background:#fff;border:1px solid #f0c0e0;padding:24px;border-radius:16px;text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -107,6 +116,9 @@ registerTemplate('tropical-grad', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:12px;`,
       num: `display:inline-block;background:linear-gradient(135deg,#00c853,#ffeb3b);color:#333;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;font-weight:700;`,
       card: `background:linear-gradient(135deg,#00c85306,#ffeb3b06);border:1px solid ${p}11;padding:24px;border-radius:14px;text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -134,6 +146,9 @@ registerTemplate('galaxy-grad', {
       img: `max-width:100%;margin:14px auto;display:block;border:1px solid #7c4dff22;border-radius:10px;`,
       num: `display:inline-block;background:linear-gradient(135deg,#7c4dff,#e040fb);color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;`,
       card: `background:#120030;border:1px solid #7c4dff22;padding:24px;border-radius:12px;text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -161,6 +176,9 @@ registerTemplate('sky-grad', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:12px;`,
       num: `display:inline-block;background:linear-gradient(180deg,#1976d2,#64b5f6);color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;`,
       card: `background:#fff;border:1px solid #bbdefb;padding:24px;border-radius:14px;text-align:center;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });

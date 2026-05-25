@@ -25,6 +25,9 @@ registerTemplate('magazine-spread', {
       img: `max-width:100%;margin:20px auto;display:block;`,
       num: `font-family:Georgia,'SimSun',serif;font-size:28px;color:${p};font-weight:700;margin-right:12px;font-style:italic;`,
       card: `background:#fff;border:1px solid #e0e0e0;padding:28px;margin:20px 0;box-shadow:2px 2px 0 ${p}22;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -51,6 +54,9 @@ registerTemplate('neon-sign', {
       img: `max-width:100%;margin:16px auto;display:block;border:1px solid ${p}33;border-radius:2px;`,
       num: `display:inline-flex;align-items:center;justify-content:center;background:${p};color:#0a0a0f;width:26px;height:26px;font-size:13px;font-weight:800;margin-right:10px;font-family:monospace;`,
       card: `background:#111118;border:1px solid ${p}33;padding:20px;margin:16px 0;box-shadow:0 0 20px ${p}0a,0 0 60px ${p}05 inset;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -77,6 +83,9 @@ registerTemplate('handwritten', {
       img: `max-width:100%;margin:14px auto;display:block;border:3px solid #fff;box-shadow:2px 2px 8px rgba(0,0,0,.15);transform:rotate(-1deg);`,
       num: `display:inline-block;background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;font-family:monospace;`,
       card: `background:#fff;border:2px dashed #ddd;padding:20px;margin:16px 0;transform:rotate(0.3deg);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -103,6 +112,9 @@ registerTemplate('wireframe', {
       img: `max-width:100%;margin:24px auto;display:block;`,
       num: `font-size:32px;color:${p};font-weight:100;margin-right:16px;letter-spacing:2px;`,
       card: `border:1px solid ${p};padding:32px;margin:24px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -129,6 +141,9 @@ registerTemplate('glassmorphism', {
       img: `max-width:100%;margin:16px auto;display:block;border-radius:16px;border:1px solid rgba(255,255,255,.2);`,
       num: `display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,.2);backdrop-filter:blur(5px);color:#fff;width:28px;height:28px;border-radius:12px;font-size:14px;font-weight:700;margin-right:10px;border:1px solid rgba(255,255,255,.2);`,
       card: `background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:24px;margin:16px 0;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -155,6 +170,9 @@ registerTemplate('newspaper', {
       img: `max-width:100%;margin:16px auto;display:block;`,
       num: `font-family:Georgia,'SimSun',serif;font-size:24px;color:${p};font-weight:700;margin-right:10px;`,
       card: `background:#fff;border:1px solid #d0c8b8;padding:24px;margin:16px 0;box-shadow:3px 3px 0 #e0d8c8;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -181,6 +199,9 @@ registerTemplate('glacier', {
       img: `max-width:100%;margin:14px auto;display:block;border-radius:14px;box-shadow:0 8px 24px rgba(14,165,233,.15);`,
       num: `display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0ea5e9,#38bdf8);color:#fff;width:26px;height:26px;border-radius:50%;font-size:13px;font-weight:700;margin-right:10px;`,
       card: `background:linear-gradient(135deg,#e0f2fe88,#f0f9ff);border:1px solid #bae6fd;padding:22px;border-radius:16px;margin:16px 0;box-shadow:0 4px 16px rgba(14,165,233,.08);`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -207,6 +228,9 @@ registerTemplate('glitch', {
       img: `max-width:100%;margin:14px auto;display:block;border:1px solid #333;filter:contrast(1.1);`,
       num: `display:inline-block;background:${p};color:#fff;width:24px;height:24px;line-height:24px;text-align:center;font-size:12px;font-weight:800;margin-right:8px;font-family:monospace;`,
       card: `background:#12121c;border:1px solid #2a2a3a;padding:20px;margin:16px 0;box-shadow:0 0 20px ${p}08;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -233,6 +257,9 @@ registerTemplate('ink-wash', {
       img: `max-width:100%;margin:20px auto;display:block;opacity:.9;`,
       num: `font-size:22px;color:#999;font-weight:300;margin-right:12px;letter-spacing:2px;`,
       card: `border:1px solid #d8d0c0;padding:28px;margin:20px 0;background:#fdfaf4;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
@@ -259,6 +286,9 @@ registerTemplate('film-vintage', {
       img: `max-width:100%;margin:14px auto;display:block;border:6px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.15);filter:sepia(.15) contrast(1.05);`,
       num: `display:inline-block;color:${p};font-size:20px;font-weight:700;margin-right:8px;font-family:Georgia,'SimSun',serif;`,
       card: `background:#faf5e8;border:1px solid #d8c8a8;padding:24px;margin:16px 0;box-shadow:2px 2px 0 #e8dcc8;`,
+      ul: "margin:14px 0;padding-left:24px;list-style:disc;",
+      ol: "margin:14px 0;padding-left:24px;list-style:decimal;",
+      li: "margin:6px 0;font-size:16px;line-height:2;color:inherit;",
     };
   }
 });
