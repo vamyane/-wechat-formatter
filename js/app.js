@@ -625,7 +625,7 @@ function renderTplStack() {
         .replace(/height:\s*(\d+(?:\.\d+)?)px/g, (_, n) => `height:${(parseFloat(n)*scale).toFixed(1)}px`);
     }
 
-    const sc = window._previewScale || 0.65; // 预览缩放比例（跟随界面缩放）
+    const sc = tplPreviewScale; // 模板demo预览缩放
 
     // 表格样式（用模板的table_th/table_td，没有则用默认）
     const thStyle = scale(s.table_th || `background:${p};color:#fff;padding:3px 6px;font-weight:600;`, sc);
@@ -1431,7 +1431,7 @@ function getMixStyle(part) {
 }
 
 // ═══════════════════════════════════════
-//  界面缩放
+//  界面缩放（CSS变量方式，不会打乱布局）
 // ═══════════════════════════════════════
 
 let uiScaleVal = 100;
@@ -1443,28 +1443,32 @@ function initUIScale() {
 }
 
 function uiZoomIn() {
-  uiScaleVal = Math.min(150, uiScaleVal + 10);
+  uiScaleVal = Math.min(160, uiScaleVal + 10);
   document.getElementById('scaleVal').textContent = uiScaleVal + '%';
   localStorage.setItem('uiScale', uiScaleVal);
   applyUIScale(uiScaleVal);
 }
 
 function uiZoomOut() {
-  uiScaleVal = Math.max(70, uiScaleVal - 10);
+  uiScaleVal = Math.max(80, uiScaleVal - 10);
   document.getElementById('scaleVal').textContent = uiScaleVal + '%';
   localStorage.setItem('uiScale', uiScaleVal);
   applyUIScale(uiScaleVal);
 }
 
 function applyUIScale(val) {
-  document.body.style.zoom = val / 100;
-  // 模板预览缩放也跟着调整
+  const base = 14 * (val / 100);
+  const padV = Math.round(9 * val / 100);
+  const padH = Math.round(18 * val / 100);
+  document.documentElement.style.setProperty('--ui-font', base + 'px');
+  document.documentElement.style.setProperty('--ui-pad', padV + 'px ' + padH + 'px');
+  // 模板预览缩放
   window._previewScale = 0.65 * (val / 100);
   renderTplStack();
 }
 
 // ═══════════════════════════════════════
-//  预览区缩放
+//  预览区缩放（手机壳）
 // ═══════════════════════════════════════
 
 let previewScaleVal = 100;
@@ -1487,6 +1491,24 @@ function applyPreviewZoom(val) {
     phone.style.transform = `scale(${val / 100})`;
     phone.style.transformOrigin = 'top center';
   }
+}
+
+// ═══════════════════════════════════════
+//  模板demo预览缩放
+// ═══════════════════════════════════════
+
+let tplPreviewScale = 0.65;
+
+function tplPreviewZoomIn() {
+  tplPreviewScale = Math.min(1.0, +(tplPreviewScale + 0.05).toFixed(2));
+  document.getElementById('tplPreviewVal').textContent = Math.round(tplPreviewScale * 100) + '%';
+  renderTplStack();
+}
+
+function tplPreviewZoomOut() {
+  tplPreviewScale = Math.max(0.35, +(tplPreviewScale - 0.05).toFixed(2));
+  document.getElementById('tplPreviewVal').textContent = Math.round(tplPreviewScale * 100) + '%';
+  renderTplStack();
 }
 
 // ═══════════════════════════════════════
