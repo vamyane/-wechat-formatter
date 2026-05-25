@@ -1497,16 +1497,16 @@ function applyPreviewZoom(val) {
 //  模板demo预览缩放
 // ═══════════════════════════════════════
 
-let tplPreviewScale = 0.65;
+let tplPreviewScale = 1.0; // 默认100%
 
 function tplPreviewZoomIn() {
-  tplPreviewScale = Math.min(1.0, +(tplPreviewScale + 0.05).toFixed(2));
+  tplPreviewScale = Math.min(1.40, +(tplPreviewScale + 0.05).toFixed(2));
   document.getElementById('tplPreviewVal').textContent = Math.round(tplPreviewScale * 100) + '%';
   renderTplStack();
 }
 
 function tplPreviewZoomOut() {
-  tplPreviewScale = Math.max(0.35, +(tplPreviewScale - 0.05).toFixed(2));
+  tplPreviewScale = Math.max(0.60, +(tplPreviewScale - 0.05).toFixed(2));
   document.getElementById('tplPreviewVal').textContent = Math.round(tplPreviewScale * 100) + '%';
   renderTplStack();
 }
