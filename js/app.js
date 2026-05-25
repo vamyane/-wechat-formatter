@@ -648,7 +648,7 @@ function renderTplStack() {
       <div class="stack-card-preview" style="background:${v.bg || '#fff'}">
         ${previewHTML}
       </div>
-      <div class="stack-card-info">
+      <div class="stack-card-info" style="background:${p}">
         <div class="stack-card-name">${v.name}</div>
         <div class="stack-card-desc">${v.desc}</div>
       </div>
