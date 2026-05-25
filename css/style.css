@@ -1250,24 +1250,25 @@ body {
   background: rgba(0,0,0,.45);
   backdrop-filter: blur(4px);
   z-index: 200;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 16px 16px;
 }
 
 .share-overlay.active {
-  display: flex;
+  display: block;
   animation: fadeIn .2s ease;
 }
 
 .share-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: var(--surface);
   border-radius: var(--radius-lg);
   width: 360px;
-  max-width: 100%;
+  max-width: 90%;
   box-shadow: var(--shadow-lg);
   animation: slideUp .25s ease;
-  max-height: calc(100vh - 120px);
+  max-height: 80vh;
   overflow-y: auto;
 }
 
@@ -1429,22 +1430,23 @@ body {
   background: rgba(0,0,0,.45);
   backdrop-filter: blur(4px);
   z-index: 200;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 16px 16px;
 }
 
 .feedback-overlay.active {
-  display: flex;
+  display: block;
   animation: fadeIn .2s ease;
 }
 
 .feedback-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: var(--surface);
   border-radius: var(--radius-lg);
   width: 90%;
   max-width: 480px;
-  max-height: calc(100vh - 120px);
+  max-height: 80vh;
   overflow-y: auto;
   box-shadow: var(--shadow-lg);
   animation: slideUp .25s ease;
