@@ -1,0 +1,21 @@
+{
+  "version": "2.0",
+  "description": "模板清单 v2 - 含分类系统",
+  "totalTemplates": 78,
+  "categories": {
+    "light": "浅色系 - 白色/浅色背景模板",
+    "dark": "深色系 - 黑色/深色背景模板",
+    "gradient": "渐变风 - 使用渐变效果的模板",
+    "border": "边框装饰 - 有明显边框/阴影装饰",
+    "block": "色块强调 - 色块背景标题",
+    "special": "特殊风格 - 独特主题风格"
+  },
+  "files": [
+    "tpl-minimal.js", "tpl-stripe.js", "tpl-magazine.js", "tpl-card.js",
+    "tpl-neon.js", "tpl-vintage.js", "tpl-modern.js", "tpl-nature.js",
+    "tpl-pack1.js", "tpl-pack2.js", "tpl-pack3.js", "tpl-pack4.js",
+    "tpl-pack5.js", "tpl-pack6.js", "tpl-pack7.js", "tpl-pack8.js",
+    "tpl-pack9.js", "tpl-pack10.js", "tpl-pack11.js", "tpl-pack12.js",
+    "tpl-pack13.js", "tpl-pack14.js"
+  ]
+}

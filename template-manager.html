@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>模板库管理</title>
+<style>
+body{font-family:-apple-system,'PingFang SC',sans-serif;max-width:700px;margin:40px auto;padding:20px;color:#333}
+h1{font-size:20px;margin-bottom:20px}
+.card{background:#f7f7f7;border-radius:12px;padding:20px;margin-bottom:16px}
+.card h3{margin:0 0 8px;font-size:15px}
+.card p{margin:0;font-size:13px;color:#666}
+.btn{display:inline-block;padding:8px 20px;border:none;border-radius:6px;cursor:pointer;font-size:14px;font-weight:600;margin:4px}
+.btn-primary{background:#4a90d9;color:#fff}
+.btn-success{background:#2ecc71;color:#fff}
+.btn-danger{background:#e74c3c;color:#fff}
+pre{background:#1a1a2e;color:#00ff88;padding:16px;border-radius:8px;font-size:13px;overflow-x:auto;line-height:1.6}
+.tag{display:inline-block;background:#e8f2ff;color:#4a90d9;padding:2px 8px;border-radius:4px;font-size:12px;margin:2px}
+.result{margin-top:16px;padding:16px;border-radius:8px;font-size:14px}
+.result.success{background:#d4edda;color:#155724}
+.result.error{background:#f8d7da;color:#721c24}
+</style>
+</head>
+<body>
+
+<h1>📦 模板库管理</h1>
+
+<div class="card">
+  <h3>当前模板</h3>
+  <div id="tplList">加载中...</div>
+</div>
+
+<div class="card">
+  <h3>添加新模板</h3>
+  <p>在 <code>templates/</code> 目录下新建 <code>tpl-xxx.js</code> 文件，然后点击下方按钮刷新清单。</p>
+  <br>
+  <button class="btn btn-primary" onclick="scanTemplates()">🔄 扫描并更新清单</button>
+  <button class="btn btn-success" onclick="openNewTemplate()">➕ 新建模板文件</button>
+  <div id="scanResult"></div>
+</div>
+
+<div class="card">
+  <h3>模板文件模板</h3>
+  <p>复制以下代码，修改参数后保存为 <code>tpl-你的模板名.js</code></p>
+  <pre id="codeTemplate"></pre>
+  <button class="btn btn-primary" onclick="copyTemplate()">📋 复制代码</button>
+</div>
+
+<script>
+const TEMPLATE_CODE = `/**
+ * 模板：你的模板名
+ * 风格：一句话描述
+ */
+registerTemplate('your-id', {
+  name: '你的模板名',
+  desc: '一句话描述风格',
+  primary: '#3b82f6',
+  bg: '#ffffff',
+  demo: '&lt;div style="font-size:12px"&gt;预览小样&lt;/div&gt;',
+  render(c) {
+    const p = c.primary, b = c.bg;
+    return {
+      body:      'font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:#333;font-size:16px;line-height:2;background:' + b + ';',
+      h1:        'text-align:center;font-size:22px;color:#1a1a1a;font-weight:800;margin:24px 0 12px;line-height:1.5;',
+      h2:        'font-size:18px;color:' + p + ';margin:36px 0 14px;padding-left:12px;border-left:4px solid ' + p + ';line-height:1.6;',
+      h3:        'font-size:16px;color:#1a1a1a;margin:24px 0 10px;font-weight:700;',
+      p:         'margin:14px 0;font-size:16px;color:#333;line-height:2;',
+      quote:     'border-left:4px solid ' + p + ';background:#f7f7f7;padding:14px 18px;margin:18px 0;color:#555;font-size:15px;line-height:1.8;',
+      highlight: 'background:#fff3cd;padding:2px 4px;',
+      divider:   'text-align:center;margin:28px 0;color:#ccc;letter-spacing:10px;font-size:14px;',
+      strong:    'color:#1a1a1a;font-weight:700;',
+      img:       'max-width:100%;border-radius:8px;margin:14px auto;display:block;',
+      num:       'display:inline-block;background:' + p + ';color:#fff;width:22px;height:22px;line-height:22px;text-align:center;border-radius:50%;font-size:13px;margin-right:8px;',
+      card:      'background:#f0f4fa;padding:24px;border-radius:12px;text-align:center;',
+    };
+  }
+});`;
+
+document.getElementById('codeTemplate').textContent = TEMPLATE_CODE;
+
+// 加载当前模板列表
+function loadList() {
+  fetch('templates/manifest.json')
+    .then(r => r.json())
+    .then(data => {
+      const list = document.getElementById('tplList');
+      if (data.templates.length === 0) {
+        list.innerHTML = '<p style="color:#999">暂无模板</p>';
+        return;
+      }
+      list.innerHTML = data.templates.map(f => 
+        `<span class="tag">📄 ${f}</span>`
+      ).join(' ');
+    })
+    .catch(() => {
+      document.getElementById('tplList').innerHTML = '<p style="color:#e74c3c">manifest.json 读取失败</p>';
+    });
+}
+
+// 扫描模板目录（手动方式：用户把文件名列出来）
+function scanTemplates() {
+  const result = document.getElementById('scanResult');
+  // 由于本地 HTML 无法读取文件系统，这里提示用户手动更新
+  result.innerHTML = `
+    <div class="result success">
+      <strong>提示：</strong>由于浏览器安全限制，无法自动扫描文件系统。<br><br>
+      请按以下步骤操作：<br>
+      1. 在 <code>templates/</code> 目录下创建新的 <code>tpl-xxx.js</code> 文件<br>
+      2. 编辑 <code>templates/manifest.json</code>，在数组中加入新文件名<br>
+      3. 刷新主页面即可看到新模板<br><br>
+      <strong>当前清单内容：</strong><br>
+      <code id="currentManifest">加载中...</code>
+    </div>
+  `;
+  
+  fetch('templates/manifest.json')
+    .then(r => r.text())
+    .then(text => {
+      document.getElementById('currentManifest').textContent = text;
+    });
+}
+
+function openNewTemplate() {
+  const name = prompt('输入模板ID（英文，如 cool-blue）：');
+  if (!name) return;
+  
+  const code = TEMPLATE_CODE.replace('your-id', name).replace('你的模板名', name);
+  
+  // 创建下载
+  const blob = new Blob([code], { type: 'text/javascript' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `tpl-${name}.js`;
+  a.click();
+  URL.revokeObjectURL(url);
+  
+  const result = document.getElementById('scanResult');
+  result.innerHTML = `
+    <div class="result success">
+      ✅ 已下载 <code>tpl-${name}.js</code><br>
+      将它放入 <code>templates/</code> 目录，然后编辑 <code>manifest.json</code> 添加文件名。
+    </div>
+  `;
+}
+
+function copyTemplate() {
+  navigator.clipboard.writeText(TEMPLATE_CODE).then(() => {
+    alert('已复制到剪贴板！');
+  });
+}
+
+loadList();
+</script>
+</body>
+</html>

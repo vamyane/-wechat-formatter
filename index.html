@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>公众号排版器 Pro - 免费在线微信排版工具 | 100+模板</title>
+<meta name="description" content="免费在线公众号排版器，100+精美模板，支持渐变、混搭、自定义颜色，一键复制到微信公众号编辑器。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+<meta name="keywords" content="公众号排版器,微信排版,公众号编辑器,排版模板,微信文章排版,公众号排版工具">
+<meta name="author" content="公众号排版器">
+<meta property="og:title" content="公众号排版器 Pro - 免费在线微信排版工具">
+<meta property="og:description" content="100+精美模板，支持渐变混搭，一键复制到公众号">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+<body>
+
+<!-- 顶栏 -->
+<header class="navbar">
+  <div class="nav-brand">
+    <span class="brand-icon">📝</span>
+    <h1>公众号排版器 <span class="version">Pro</span></h1>
+  </div>
+  <div class="nav-actions">
+    <button class="btn btn-mix" id="mixToggle" onclick="toggleMixMode()" title="混搭模式">
+      <span class="btn-icon">🧩</span> <span class="btn-text">混搭</span>
+    </button>
+    <button class="btn btn-copy" onclick="copyToClipboard()">
+      <span class="btn-icon">📋</span> <span class="btn-text">复制到公众号</span>
+    </button>
+    <button class="btn btn-clear" onclick="clearAll()">
+      <span class="btn-icon">🗑️</span> <span class="btn-text">清空</span>
+    </button>
+  </div>
+</header>
+
+<!-- 手机端底部 Tab 栏 -->
+<nav class="mobile-tabs" id="mobileTabs">
+  <button class="mobile-tab active" data-panel="templatePanel" onclick="switchMobileTab('templatePanel', this)">
+    <span class="tab-icon">🎨</span><span class="tab-label">模板</span>
+  </button>
+  <button class="mobile-tab" data-panel="editorPanel" onclick="switchMobileTab('editorPanel', this)">
+    <span class="tab-icon">✏️</span><span class="tab-label">编辑</span>
+  </button>
+  <button class="mobile-tab" data-panel="previewPanel" onclick="switchMobileTab('previewPanel', this)">
+    <span class="tab-icon">👁️</span><span class="tab-label">预览</span>
+  </button>
+</nav>
+
+<!-- 主区域 -->
+<div class="main">
+  <!-- 模板选择区（左侧/顶部） -->
+  <div class="template-panel" id="templatePanel">
+    <div class="tpl-panel-header">
+      <span class="tpl-panel-title">🎨 模板</span>
+      <div class="tpl-panel-actions">
+        <select onchange="filterCategory(this.value)" id="catSelect" class="tpl-cat-select">
+          <option value="all">全部</option>
+        </select>
+      </div>
+    </div>
+    <div class="tpl-stack-wrap" id="tplStackWrap">
+      <div class="tpl-stack" id="tplStack"></div>
+    </div>
+    <div class="tpl-stack-nav">
+      <button class="stack-nav-btn" onclick="stackPrev()">◀</button>
+      <span class="stack-nav-label" id="stackNavLabel">1 / 30</span>
+      <button class="stack-nav-btn" onclick="stackNext()">▶</button>
+    </div>
+    <div class="stack-layers" id="stackLayers"></div>
+    <div class="stack-scroll-hint">🖱️ 滚轮切换 · 点击左右卡片翻页</div>
+
+    <!-- 自定义颜色 -->
+    <div class="color-customizer" id="colorCustomizer">
+      <div class="color-cz-header" onclick="toggleColorPanel()">
+        <span>🎨 自定义颜色</span>
+        <span class="color-cz-toggle" id="colorCzToggle">▶</span>
+      </div>
+      <div class="color-cz-body" id="colorCzBody" style="display:none">
+        <div class="color-cz-row">
+          <label>主色调</label>
+          <input type="color" id="cPrimary" onchange="setCustomColor()">
+          <div class="color-presets" id="presetBar"></div>
+        </div>
+        <div class="color-cz-row">
+          <label>渐变色</label>
+          <input type="color" id="cGradEnd" onchange="setCustomColor()">
+          <span class="color-cz-hint">留空=纯色</span>
+        </div>
+        <div class="color-cz-row">
+          <label>背景色</label>
+          <input type="color" id="cBg" onchange="setCustomColor()">
+        </div>
+        <div class="color-cz-row">
+          <label>字色</label>
+          <input type="color" id="cText" onchange="setCustomColor()">
+          <span class="color-cz-hint">留空=模板默认</span>
+        </div>
+        <div class="color-cz-row">
+          <label>彩虹模式</label>
+          <label class="color-toggle">
+            <input type="checkbox" id="cRainbow" onchange="setCustomColor()">
+            <span class="color-toggle-slider"></span>
+          </label>
+          <span class="color-cz-hint">标题渐变彩虹色</span>
+        </div>
+        <button class="color-reset-btn" onclick="resetColors()">↩️ 重置为模板默认</button>
+      </div>
+    </div>
+
+    <!-- 混搭模式面板 -->
+    <div class="mix-panel" id="mixPanel" style="display:none">
+      <div class="mix-header">
+        <span>🧩 混搭模式</span>
+        <button class="mix-close-btn" onclick="toggleMixMode()">✕ 关闭</button>
+      </div>
+      <div class="mix-hint-text">从不同模板中挑选各部分样式，自由组合</div>
+      <div class="mix-items">
+        <div class="mix-item">
+          <label>📌 标题</label>
+          <select id="mixH2" onchange="applyMix()"></select>
+        </div>
+        <div class="mix-item">
+          <label>📎 小标题</label>
+          <select id="mixH3" onchange="applyMix()"></select>
+        </div>
+        <div class="mix-item">
+          <label>📝 正文</label>
+          <select id="mixP" onchange="applyMix()"></select>
+        </div>
+        <div class="mix-item">
+          <label>💬 引用</label>
+          <select id="mixQuote" onchange="applyMix()"></select>
+        </div>
+        <div class="mix-item">
+          <label>📊 表格</label>
+          <select id="mixTable" onchange="applyMix()"></select>
+        </div>
+        <div class="mix-item">
+          <label>🖼️ 图片</label>
+          <select id="mixImg" onchange="applyMix()"></select>
+        </div>
+        <div class="mix-item">
+          <label>🎴 卡片</label>
+          <select id="mixCard" onchange="applyMix()"></select>
+        </div>
+      </div>
+      <button class="mix-apply-btn" onclick="applyMix();toast('✅ 混搭样式已应用')">✅ 应用混搭</button>
+      <button class="mix-reset-btn" onclick="resetMix()">↩️ 重置为当前模板</button>
+    </div>
+  </div>
+
+  <!-- 分隔条1 -->
+  <div class="resizer" id="resizer1" data-left="templatePanel" data-right="editorPanel"></div>
+
+  <!-- 编辑区（中间） -->
+  <div class="editor-panel" id="editorPanel">
+    <div class="editor-toolbar">
+      <div class="toolbar-group">
+        <button onclick="fmt('h2')" title="大标题">📌 大标题</button>
+        <button onclick="fmt('h3')" title="小标题">📎 小标题</button>
+        <button onclick="fmt('blockquote')" title="引用">💬 引用</button>
+        <button onclick="fmt('p')" title="正文">📝 正文</button>
+      </div>
+      <div class="toolbar-divider"></div>
+      <div class="toolbar-group">
+        <button onclick="insertDivider()">— 分隔线 —</button>
+        <button onclick="insertHighlight()">🖍️ 高亮</button>
+        <button onclick="document.execCommand('bold')">𝐁 加粗</button>
+      </div>
+      <div class="toolbar-divider"></div>
+      <div class="toolbar-group">
+        <select onchange="quickIns(this.value);this.value=''" class="toolbar-select">
+          <option value="">+ 快速插入</option>
+          <option value="ending">结尾引导</option>
+          <option value="author">作者简介</option>
+          <option value="tips">提示框</option>
+          <option value="nums">序号列表</option>
+          <option value="imgtext">图文并排</option>
+        </select>
+      </div>
+      <div class="toolbar-divider"></div>
+      <div class="toolbar-group">
+        <button onclick="document.getElementById('imgUp').click()">🖼️ 图片</button>
+        <input type="file" id="imgUp" accept="image/*" multiple style="display:none" onchange="addImgs(this.files)">
+        <select onchange="setImgStyle(this.value)" id="imgStyleSelect" class="toolbar-select" title="图片边框样式">
+          <option value="img">默认</option>
+          <option value="img_border">边框</option>
+          <option value="img_shadow">阴影</option>
+          <option value="img_card">卡片</option>
+          <option value="img_polaroid">拍立得</option>
+        </select>
+      </div>
+      <div class="toolbar-divider"></div>
+      <div class="toolbar-group table-toolbar">
+        <select onchange="setTableTpl(this.value)" id="tableTplSelect" class="toolbar-select" title="表格模板">
+          <option value="">📊 表格样式</option>
+        </select>
+        <select onchange="setTableHeader(this.value==='true')" id="tableHeaderSelect" class="toolbar-select" title="有无表头">
+          <option value="true">有表头</option>
+          <option value="false">无表头</option>
+        </select>
+        <div class="table-insert-wrap">
+          <button onclick="toggleTablePicker()" id="tableInsertBtn" title="插入表格">📋 表格</button>
+          <div class="table-picker" id="tablePicker">
+            <div class="picker-header">
+              <span class="picker-label" id="pickerLabel">选择表格大小</span>
+              <div class="picker-inputs">
+                <input type="number" id="pickerRows" min="1" max="20" value="1" class="picker-num"> ×
+                <input type="number" id="pickerCols" min="1" max="10" value="1" class="picker-num">
+                <button onclick="insertTableFromPicker()" class="picker-ok">确定</button>
+              </div>
+            </div>
+            <div class="picker-grid" id="pickerGrid"></div>
+            <div class="picker-hint">鼠标悬停选择行列数，或直接输入数字</div>
+          </div>
+        </div>
+        <button onclick="applyTableToExisting()" title="刷新表格样式">🎨</button>
+      </div>
+    </div>
+    <div id="editor" contenteditable="true"></div>
+  </div>
+
+  <!-- 分隔条2 -->
+  <div class="resizer" id="resizer2" data-left="editorPanel" data-right="previewPanel"></div>
+
+  <!-- 预览区（右侧） -->
+  <div class="preview-panel" id="previewPanel">
+    <div class="preview-header">
+      <div class="preview-header-left">
+        <span class="preview-label">📱 预览</span>
+        <span class="preview-tpl" id="tplLabel">简约白</span>
+      </div>
+      <div class="preview-header-right">
+        <div class="preview-controls">
+          <label class="wx-toggle">
+            <input type="checkbox" id="wxMode" onchange="toggleWxMode()" checked>
+            <span>微信兼容</span>
+          </label>
+          <div class="zoom-control">
+            <span class="zoom-label">缩放</span>
+            <input type="range" id="zoomRange" min="75" max="125" value="100" step="5" oninput="setZoom(this.value)">
+            <span class="zoom-val" id="zoomVal">100%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="preview-phone">
+      <div class="phone-mockup">
+        <div class="phone-shell">
+          <div class="phone-notch"></div>
+          <div class="phone-screen" id="phoneScreen">
+            <div class="phone-statusbar"><span>9:41</span><span>●●● WiFi 🔋</span></div>
+            <div class="phone-content" id="preview"></div>
+          </div>
+          <div class="phone-home-bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 反馈按钮 -->
+<button class="feedback-btn" onclick="openFeedback()" title="意见反馈">💬 反馈</button>
+
+<!-- 反馈弹窗 -->
+<div class="feedback-overlay" id="feedbackOverlay">
+  <div class="feedback-modal">
+    <div class="feedback-header">
+      <h3>💬 意见反馈</h3>
+      <button class="feedback-close" onclick="closeFeedback()">✕</button>
+    </div>
+    <div class="feedback-body">
+      <p class="feedback-desc">你的建议是我们更新的方向！请选择反馈方式：</p>
+      <div class="feedback-options">
+        <a class="feedback-option" href="https://github.com/yourname/wechat-formatter/issues/new" target="_blank" rel="noopener">
+          <span class="fo-icon">🐙</span>
+          <span class="fo-text">GitHub Issues</span>
+          <span class="fo-desc">提交 bug 或功能建议</span>
+        </a>
+        <a class="feedback-option" href="mailto:your@email.com?subject=公众号排版器反馈" target="_blank">
+          <span class="fo-icon">📧</span>
+          <span class="fo-text">邮件反馈</span>
+          <span class="fo-desc">your@email.com</span>
+        </a>
+        <div class="feedback-option" onclick="copyFeedbackLink()">
+          <span class="fo-icon">🔗</span>
+          <span class="fo-text">复制反馈链接</span>
+          <span class="fo-desc">分享给朋友一起提建议</span>
+        </div>
+      </div>
+      <div class="feedback-quick">
+        <p class="fq-title">快速反馈（直接在这里写）</p>
+        <textarea id="feedbackText" class="fq-input" placeholder="你觉得哪里可以改进？想要什么新功能？"></textarea>
+        <button class="fq-submit" onclick="submitFeedback()">提交反馈 ✉️</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 提示 -->
+<div class="toast" id="toast"></div>
+
+<!-- 表格样式系统 -->
+<script src="js/table-styles.js"></script>
+
+<!-- 引擎 -->
+<script src="js/engine.js"></script>
+
+<!-- 原有模板 -->
+<script src="templates/tpl-minimal.js"></script>
+<script src="templates/tpl-stripe.js"></script>
+<script src="templates/tpl-magazine.js"></script>
+<script src="templates/tpl-card.js"></script>
+<script src="templates/tpl-neon.js"></script>
+<script src="templates/tpl-vintage.js"></script>
+<script src="templates/tpl-modern.js"></script>
+<script src="templates/tpl-nature.js"></script>
+<script src="templates/tpl-pack1.js"></script>
+<script src="templates/tpl-pack2.js"></script>
+<script src="templates/tpl-pack3.js"></script>
+<script src="templates/tpl-pack4.js"></script>
+
+<!-- 新增50个模板 -->
+<script src="templates/tpl-pack5.js"></script>
+<script src="templates/tpl-pack6.js"></script>
+<script src="templates/tpl-pack7.js"></script>
+<script src="templates/tpl-pack8.js"></script>
+<script src="templates/tpl-pack9.js"></script>
+<script src="templates/tpl-pack10.js"></script>
+<script src="templates/tpl-pack11.js"></script>
+<script src="templates/tpl-pack12.js"></script>
+<script src="templates/tpl-pack13.js"></script>
+<script src="templates/tpl-pack14.js"></script>
+<script src="templates/tpl-pack15.js"></script>
+<script src="templates/tpl-pack16.js"></script>
+
+<!-- 应用 -->
+<script src="js/app.js"></script>
+
+<!-- 百度自动推送 -->
+<script>
+(function(){
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  } else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>
