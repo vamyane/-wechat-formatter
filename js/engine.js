@@ -88,10 +88,10 @@ function getImgVariants(tplStyle) {
 
   return {
     img: base,
-    img_border: base.replace(/border-radius:[^;]+;?/, '').replace(/display:block/, 'display:block;border:3px solid #e8e8e8;border-radius:6px;'),
-    img_shadow: base.replace(/display:block/, 'display:block;box-shadow:0 4px 16px rgba(0,0,0,.1);'),
-    img_card: base.replace(/display:block/, 'display:block;padding:8px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08);border-radius:10px;'),
-    img_polaroid: base.replace(/display:block/, 'display:block;padding:8px 8px 28px;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.12);border-radius:4px;'),
+    img_border: 'max-width:100%;display:block;margin:10px auto;border:4px solid #d1d5db;border-radius:8px;padding:0;',
+    img_shadow: 'max-width:100%;display:block;margin:10px auto;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.25);border:none;',
+    img_card: 'max-width:100%;display:block;margin:10px auto;padding:12px;background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,.1);',
+    img_polaroid: 'max-width:100%;display:block;margin:10px auto;padding:12px 12px 40px;background:#ffffff;border:1px solid #e5e7eb;border-radius:4px;box-shadow:0 6px 20px rgba(0,0,0,.15);',
   };
 }
 

@@ -203,8 +203,10 @@ function addImgs(files) {
     r.onload = e => {
       const tpl = getTemplate(curTpl);
       const imgStyle = tpl ? tpl.render(getColors()).img : 'max-width:100%;border-radius:8px;margin:14px auto;display:block;';
+      // 强制覆盖父级缩进：用负margin+padding撑满整行
+      const fullImgStyle = imgStyle + ';padding-left:0;padding-right:0;margin-left:auto;margin-right:auto;display:block;max-width:100%;';
       document.execCommand('insertHTML', false,
-        `<img src="${e.target.result}" style="${imgStyle}"><p><br></p>`);
+        `<p style="margin:14px 0;text-align:center"><img src="${e.target.result}" style="${fullImgStyle}"></p><p><br></p>`);
       render();
     };
     r.readAsDataURL(f);
