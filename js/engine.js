@@ -84,14 +84,15 @@ const LEGACY_CATEGORY_MAP = {
  * 如果模板没有定义变体，从base img样式自动生成
  */
 function getImgVariants(tplStyle) {
-  const base = tplStyle.img || 'max-width:100%;border-radius:6px;display:block;margin:10px auto;';
+  // 所有图片样式都强制居中：margin auto + text-align center
+  const base = tplStyle.img || 'max-width:100%;border-radius:6px;display:block;margin:14px auto;';
 
   return {
     img: base,
-    img_border: 'max-width:100%;display:block;margin:10px auto;border:4px solid #d1d5db;border-radius:8px;padding:0;',
-    img_shadow: 'max-width:100%;display:block;margin:10px auto;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.25);border:none;',
-    img_card: 'max-width:100%;display:block;margin:10px auto;padding:12px;background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,.1);',
-    img_polaroid: 'max-width:100%;display:block;margin:10px auto;padding:12px 12px 40px;background:#ffffff;border:1px solid #e5e7eb;border-radius:4px;box-shadow:0 6px 20px rgba(0,0,0,.15);',
+    img_border: 'max-width:100%;display:block;margin:14px auto;border:4px solid #d1d5db;border-radius:8px;padding:0;',
+    img_shadow: 'max-width:100%;display:block;margin:14px auto;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.25);border:none;',
+    img_card: 'max-width:100%;display:block;margin:14px auto;padding:12px;background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,.1);',
+    img_polaroid: 'max-width:100%;display:block;margin:14px auto;padding:12px 12px 40px;background:#ffffff;border:1px solid #e5e7eb;border-radius:4px;box-shadow:0 6px 20px rgba(0,0,0,.15);',
   };
 }
 
@@ -237,6 +238,11 @@ function applyTemplateStyles(html, tplId, colors) {
   tmp.querySelectorAll('img').forEach(e => {
     const imgs = getImgVariants(s);
     e.setAttribute('style', imgs[window.curImgStyle] || imgs.img);
+    // 确保图片在列表等缩进容器中也能居中
+    const parent = e.parentElement;
+    if (parent && parent.tagName !== 'BODY') {
+      parent.style.textAlign = 'center';
+    }
   });
   tmp.querySelectorAll('.hl').forEach(e => e.setAttribute('style', s.highlight));
   tmp.querySelectorAll('.dv').forEach(e => e.setAttribute('style', s.divider));

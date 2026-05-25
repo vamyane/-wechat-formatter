@@ -1263,6 +1263,10 @@ function applyMixStyles(html, tplId, colors) {
   tmp.querySelectorAll('img').forEach(e => {
     const imgs = getImgVariants(sImg);
     e.setAttribute('style', imgs[window.curImgStyle] || imgs.img);
+    const parent = e.parentElement;
+    if (parent && parent.tagName !== 'BODY') {
+      parent.style.textAlign = 'center';
+    }
   });
   tmp.querySelectorAll('.hl').forEach(e => e.setAttribute('style', baseS.highlight));
   tmp.querySelectorAll('.dv').forEach(e => e.setAttribute('style', baseS.divider));
