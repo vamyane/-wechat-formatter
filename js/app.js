@@ -1465,7 +1465,7 @@ function setUIScale(val) {
 }
 
 function applyUIScale(val) {
-  document.documentElement.style.setProperty('--ui-scale', val / 100);
+  document.body.style.zoom = val / 100;
   // 模板预览区域也跟着缩放
   const previewScale = 0.65 * (val / 100);
   window._previewScale = previewScale;
