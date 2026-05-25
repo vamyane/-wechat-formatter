@@ -503,17 +503,8 @@ function savePanelSizes() {
 }
 
 function restorePanelSizes() {
-  try {
-    const sizes = JSON.parse(localStorage.getItem('panelSizes'));
-    if (!sizes) return;
-    Object.entries(sizes).forEach(([id, w]) => {
-      const el = document.getElementById(id);
-      if (el && w) {
-        el.style.width = w + 'px';
-        el.style.flex = 'none';
-      }
-    });
-  } catch (e) {}
+  // 清除旧的面板尺寸，使用 CSS 等分布局
+  localStorage.removeItem('panelSizes');
 }
 
 // ── 模板面板（左侧） ──
@@ -1434,10 +1425,10 @@ function getMixStyle(part) {
 //  界面缩放（CSS变量方式，不会打乱布局）
 // ═══════════════════════════════════════
 
-let uiScaleVal = 100;
+let uiScaleVal = 120; // 默认120%
 
 function initUIScale() {
-  uiScaleVal = parseInt(localStorage.getItem('uiScale') || '100');
+  uiScaleVal = parseInt(localStorage.getItem('uiScale') || '120');
   document.getElementById('scaleVal').textContent = uiScaleVal + '%';
   applyUIScale(uiScaleVal);
 }
@@ -1497,17 +1488,19 @@ function applyPreviewZoom(val) {
 //  模板demo预览缩放
 // ═══════════════════════════════════════
 
-let tplPreviewScale = 1.0; // 默认100%
+let tplPreviewScale = 1.4; // 140%作为默认基准，显示为100%
 
 function tplPreviewZoomIn() {
-  tplPreviewScale = Math.min(1.40, +(tplPreviewScale + 0.05).toFixed(2));
-  document.getElementById('tplPreviewVal').textContent = Math.round(tplPreviewScale * 100) + '%';
+  tplPreviewScale = Math.min(2.0, +(tplPreviewScale + 0.1).toFixed(2));
+  const display = Math.round((tplPreviewScale / 1.4) * 100);
+  document.getElementById('tplPreviewVal').textContent = display + '%';
   renderTplStack();
 }
 
 function tplPreviewZoomOut() {
-  tplPreviewScale = Math.max(0.60, +(tplPreviewScale - 0.05).toFixed(2));
-  document.getElementById('tplPreviewVal').textContent = Math.round(tplPreviewScale * 100) + '%';
+  tplPreviewScale = Math.max(0.84, +(tplPreviewScale - 0.1).toFixed(2));
+  const display = Math.round((tplPreviewScale / 1.4) * 100);
+  document.getElementById('tplPreviewVal').textContent = display + '%';
   renderTplStack();
 }
 
