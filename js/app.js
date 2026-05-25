@@ -650,6 +650,10 @@ function renderTplStack() {
         <tr><td style="${tdStyle}">示例A</td><td style="${tdStyle}">128</td><td style="${tdStyle}">✅</td></tr>
         <tr style="${altStyle}"><td style="${tdStyle}${altStyle}">示例B</td><td style="${tdStyle}${altStyle}">256</td><td style="${tdStyle}${altStyle}">⏳</td></tr>
       </table>
+      <ul style="${scale(s.ul || 'margin:8px 0;padding-left:20px;list-style:disc', sc)}">
+        <li style="${scale(s.li || 'margin:4px 0;line-height:1.6', sc)}">列表项示例</li>
+        <li style="${scale(s.li || 'margin:4px 0;line-height:1.6', sc)}">列表项示例</li>
+      </ul>
       <div style="${cardStyle}">卡片样式预览</div>
     `;
 
