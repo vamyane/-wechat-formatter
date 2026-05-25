@@ -438,16 +438,22 @@ body {
 }
 
 .stack-card-name {
-  font-size: calc(var(--ui-font) + 2px);
+  font-size: calc(var(--ui-font));
   font-weight: 700;
   color: #fff;
-  margin-bottom: 2px;
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .stack-card-desc {
-  font-size: calc(var(--ui-font) - 2px);
-  color: rgba(255,255,255,.8);
-  line-height: 1.3;
+  font-size: calc(var(--ui-font) - 3px);
+  color: rgba(255,255,255,.75);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .stack-card-tag {

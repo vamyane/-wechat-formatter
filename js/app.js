@@ -1488,18 +1488,18 @@ function applyPreviewZoom(val) {
 //  模板demo预览缩放
 // ═══════════════════════════════════════
 
-let tplPreviewScale = 1.4; // 140%作为默认基准，显示为100%
+let tplPreviewScale = 0.9; // 当前90%作为基准=显示100%
 
 function tplPreviewZoomIn() {
-  tplPreviewScale = Math.min(2.0, +(tplPreviewScale + 0.1).toFixed(2));
-  const display = Math.round((tplPreviewScale / 1.4) * 100);
+  tplPreviewScale = Math.min(1.26, +(tplPreviewScale + 0.045).toFixed(3));
+  const display = Math.round((tplPreviewScale / 0.9) * 100);
   document.getElementById('tplPreviewVal').textContent = display + '%';
   renderTplStack();
 }
 
 function tplPreviewZoomOut() {
-  tplPreviewScale = Math.max(0.84, +(tplPreviewScale - 0.1).toFixed(2));
-  const display = Math.round((tplPreviewScale / 1.4) * 100);
+  tplPreviewScale = Math.max(0.54, +(tplPreviewScale - 0.045).toFixed(3));
+  const display = Math.round((tplPreviewScale / 0.9) * 100);
   document.getElementById('tplPreviewVal').textContent = display + '%';
   renderTplStack();
 }
