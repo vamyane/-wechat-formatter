@@ -645,12 +645,12 @@ function renderTplStack() {
     `;
 
     card.innerHTML = `
-      <div class="stack-card-preview" style="background:${v.bg || '#fff'}">
-        ${previewHTML}
-      </div>
       <div class="stack-card-info" style="background:${p}">
         <div class="stack-card-name">${v.name}</div>
         <div class="stack-card-desc">${v.desc}</div>
+      </div>
+      <div class="stack-card-preview" style="background:${v.bg || '#fff'}">
+        ${previewHTML}
       </div>
       ${dist === 0 && total > 1 ? `<div class="stack-hint">◀ ▶ 还有${total - 1}个模板</div>` : ''}
     `;

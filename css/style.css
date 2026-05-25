@@ -350,6 +350,8 @@ body {
   background: var(--surface);
   border: 2px solid var(--border);
   box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
 }
 
 .stack-card.top {
@@ -403,7 +405,17 @@ body {
   pointer-events: none;
 }
 
-/* 堆叠卡片预览 — 不限制内部元素样式，完全由模板 inline style 控制 */
+/* 堆叠卡片 — 名字在上，预览在下 */
+.stack-card-info {
+  height: 10%;
+  padding: 6px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
 .stack-card-preview {
   height: 90%;
   display: flex;
@@ -413,28 +425,6 @@ body {
   padding: 14px 16px;
   overflow: hidden;
   text-align: left;
-}
-
-.stack-card-preview .preview-img-wrap {
-  margin: 4px 0;
-  line-height: 0;
-  text-align: center;
-}
-
-.stack-card-preview .preview-img-wrap img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
-
-.stack-card-info {
-  height: 10%;
-  padding: 6px 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-top: 1px solid var(--border);
-  color: #fff;
 }
 
 .stack-card-name {
