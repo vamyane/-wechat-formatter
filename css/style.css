@@ -120,6 +120,16 @@ body {
   color: #ef4444;
 }
 
+.btn-share {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+.btn-share:hover {
+  background: #dcfce7;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
 /* ── 分隔条 ── */
 .resizer {
   width: 6px;
@@ -1227,6 +1237,159 @@ body {
   border-color: var(--primary);
   color: var(--primary);
   background: var(--primary-light);
+}
+
+/* ═══════════════════════════════════════
+   分享弹窗
+   ═══════════════════════════════════════ */
+
+.share-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-overlay.active {
+  display: flex;
+  animation: fadeIn .2s ease;
+}
+
+.share-modal {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  width: 360px;
+  max-width: 90%;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp .25s ease;
+}
+
+.share-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.share-header h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.share-close {
+  background: var(--surface-3);
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.share-close:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.share-body {
+  padding: 20px;
+}
+
+.share-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.share-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--text);
+  transition: all var(--transition);
+}
+
+.share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.share-wechat:hover { border-color: #07c160; background: #f0fff4; }
+.share-qq:hover { border-color: #12b7f5; background: #f0f9ff; }
+.share-weibo:hover { border-color: #e6162d; background: #fff5f5; }
+.share-twitter:hover { border-color: #1da1f2; background: #f0f9ff; }
+
+.share-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.share-link-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.share-link-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: var(--text);
+  background: var(--surface-2);
+  outline: none;
+}
+
+.share-copy-btn {
+  padding: 8px 16px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition);
+}
+
+.share-copy-btn:hover {
+  background: var(--primary-hover);
+}
+
+.share-qr {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.share-qr canvas {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.share-hint {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin: 0;
 }
 
 /* ═══════════════════════════════════════

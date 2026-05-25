@@ -25,6 +25,9 @@
     <h1>公众号排版器 <span class="version">Pro</span></h1>
   </div>
   <div class="nav-actions">
+    <button class="btn btn-share" onclick="toggleShare()" title="分享">
+      <span class="btn-icon">🔗</span> <span class="btn-text">分享</span>
+    </button>
     <button class="btn btn-mix" id="mixToggle" onclick="toggleMixMode()" title="混搭模式">
       <span class="btn-icon">🧩</span> <span class="btn-text">混搭</span>
     </button>
@@ -35,6 +38,42 @@
       <span class="btn-icon">🗑️</span> <span class="btn-text">清空</span>
     </button>
   </div>
+
+<!-- 分享弹窗 -->
+<div class="share-overlay" id="shareOverlay">
+  <div class="share-modal">
+    <div class="share-header">
+      <h3>🔗 分享给朋友</h3>
+      <button class="share-close" onclick="closeShare()">✕</button>
+    </div>
+    <div class="share-body">
+      <div class="share-row">
+        <button class="share-btn share-wechat" onclick="shareToWechat()">
+          <span class="share-icon">💬</span>
+          <span>微信</span>
+        </button>
+        <button class="share-btn share-qq" onclick="shareToQQ()">
+          <span class="share-icon">🐧</span>
+          <span>QQ</span>
+        </button>
+        <button class="share-btn share-weibo" onclick="shareToWeibo()">
+          <span class="share-icon">🔴</span>
+          <span>微博</span>
+        </button>
+        <button class="share-btn share-twitter" onclick="shareToTwitter()">
+          <span class="share-icon">🐦</span>
+          <span>Twitter</span>
+        </button>
+      </div>
+      <div class="share-link-row">
+        <input type="text" class="share-link-input" id="shareLinkInput" readonly>
+        <button class="share-copy-btn" onclick="copyShareLink()">复制链接</button>
+      </div>
+      <div class="share-qr" id="shareQR"></div>
+      <p class="share-hint">微信扫一扫分享</p>
+    </div>
+  </div>
+</div>
 </header>
 
 <!-- 手机端底部 Tab 栏 -->

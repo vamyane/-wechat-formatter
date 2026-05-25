@@ -1442,6 +1442,85 @@ function getMixStyle(part) {
 }
 
 // ═══════════════════════════════════════
+//  分享功能
+// ═══════════════════════════════════════
+
+function toggleShare() {
+  const url = window.location.href;
+  document.getElementById('shareLinkInput').value = url;
+  document.getElementById('shareOverlay').classList.add('active');
+  generateQR(url);
+}
+
+function closeShare() {
+  document.getElementById('shareOverlay').classList.remove('active');
+}
+
+function shareToWechat() {
+  // 微信只能通过扫码或复制链接
+  copyShareLink();
+  toast('✅ 链接已复制，粘贴到微信发送即可');
+}
+
+function shareToQQ() {
+  const url = encodeURIComponent(window.location.href);
+  const title = encodeURIComponent('公众号排版器 Pro - 免费在线排版工具');
+  window.open(`https://connect.qq.com/widget/shareqq/index.html?url=${url}&title=${title}`);
+}
+
+function shareToWeibo() {
+  const url = encodeURIComponent(window.location.href);
+  const title = encodeURIComponent('推荐一个超好用的公众号排版器，100+模板免费用！');
+  window.open(`https://service.weibo.com/share/share.php?url=${url}&title=${title}`);
+}
+
+function shareToTwitter() {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent('Free WeChat article formatter with 100+ templates');
+  window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`);
+}
+
+function copyShareLink() {
+  const input = document.getElementById('shareLinkInput');
+  input.select();
+  navigator.clipboard.writeText(input.value).then(() => {
+    toast('✅ 链接已复制');
+  }).catch(() => {
+    document.execCommand('copy');
+    toast('✅ 链接已复制');
+  });
+}
+
+// 简易 QR 码生成器（纯 JS，无需外部库）
+function generateQR(text) {
+  const container = document.getElementById('shareQR');
+  container.innerHTML = '';
+  const canvas = document.createElement('canvas');
+  const size = 160;
+  canvas.width = size;
+  canvas.height = size;
+  const ctx = canvas.getContext('2d');
+
+  // 用第三方 API 生成 QR（轻量方案）
+  const img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.onload = function() {
+    ctx.drawImage(img, 0, 0, size, size);
+  };
+  img.onerror = function() {
+    // API 失败时显示提示
+    container.innerHTML = '<p style="font-size:12px;color:var(--text-muted)">请复制链接手动分享</p>';
+  };
+  img.src = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(text)}`;
+  container.appendChild(canvas);
+}
+
+// 点击遮罩关闭分享
+document.addEventListener('click', (e) => {
+  if (e.target.id === 'shareOverlay') closeShare();
+});
+
+// ═══════════════════════════════════════
 //  反馈系统
 // ═══════════════════════════════════════
 
