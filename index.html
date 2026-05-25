@@ -27,9 +27,9 @@
   </div>
   <div class="nav-actions">
     <div class="ui-scale-control">
-      <span class="scale-label">🔍</span>
-      <input type="range" id="uiScale" min="80" max="140" value="100" step="10" oninput="setUIScale(this.value)">
+      <button class="scale-btn" onclick="uiZoomOut()" title="缩小界面">🔍−</button>
       <span class="scale-val" id="scaleVal">100%</span>
+      <button class="scale-btn" onclick="uiZoomIn()" title="放大界面">🔍+</button>
     </div>
     <button class="btn btn-share" onclick="toggleShare()" title="分享">
       <span class="btn-icon">🔗</span> <span class="btn-text">分享</span>
@@ -285,10 +285,10 @@
             <input type="checkbox" id="wxMode" onchange="toggleWxMode()" checked>
             <span>微信兼容</span>
           </label>
-          <div class="zoom-control">
-            <span class="zoom-label">缩放</span>
-            <input type="range" id="zoomRange" min="75" max="125" value="100" step="5" oninput="setZoom(this.value)">
-            <span class="zoom-val" id="zoomVal">100%</span>
+          <div class="preview-zoom-control">
+            <button class="scale-btn" onclick="previewZoomOut()" title="缩小预览">−</button>
+            <span class="scale-val" id="previewZoomVal">100%</span>
+            <button class="scale-btn" onclick="previewZoomIn()" title="放大预览">+</button>
           </div>
         </div>
       </div>

@@ -27,9 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 初始化表格模板选择器
   initTableTplSelector();
 
-  // 初始化预览缩放
-  setZoom(previewZoom);
-
   // 初始化模板面板
   initTplPanel();
 
@@ -451,17 +448,6 @@ function toggleWxMode() {
 /**
  * 设置预览缩放比例
  */
-function setZoom(val) {
-  previewZoom = parseInt(val);
-  document.getElementById('zoomVal').textContent = previewZoom + '%';
-
-  const phone = document.querySelector('.phone-mockup');
-  if (phone) {
-    phone.style.transform = `scale(${previewZoom / 100})`;
-    phone.style.transformOrigin = 'top center';
-  }
-}
-
 // ═══ 分隔条拖拽 ═══
 
 function initResizers() {
@@ -1448,27 +1434,59 @@ function getMixStyle(part) {
 //  界面缩放
 // ═══════════════════════════════════════
 
+let uiScaleVal = 100;
+
 function initUIScale() {
-  const saved = localStorage.getItem('uiScale') || '100';
-  const slider = document.getElementById('uiScale');
-  const valEl = document.getElementById('scaleVal');
-  if (slider) slider.value = saved;
-  if (valEl) valEl.textContent = saved + '%';
-  applyUIScale(parseInt(saved));
+  uiScaleVal = parseInt(localStorage.getItem('uiScale') || '100');
+  document.getElementById('scaleVal').textContent = uiScaleVal + '%';
+  applyUIScale(uiScaleVal);
 }
 
-function setUIScale(val) {
-  val = parseInt(val);
-  document.getElementById('scaleVal').textContent = val + '%';
-  localStorage.setItem('uiScale', val);
-  applyUIScale(val);
+function uiZoomIn() {
+  uiScaleVal = Math.min(150, uiScaleVal + 10);
+  document.getElementById('scaleVal').textContent = uiScaleVal + '%';
+  localStorage.setItem('uiScale', uiScaleVal);
+  applyUIScale(uiScaleVal);
+}
+
+function uiZoomOut() {
+  uiScaleVal = Math.max(70, uiScaleVal - 10);
+  document.getElementById('scaleVal').textContent = uiScaleVal + '%';
+  localStorage.setItem('uiScale', uiScaleVal);
+  applyUIScale(uiScaleVal);
 }
 
 function applyUIScale(val) {
   document.body.style.zoom = val / 100;
-  // 模板预览区域也跟着缩放
-  const previewScale = 0.65 * (val / 100);
-  window._previewScale = previewScale;
+  // 模板预览缩放也跟着调整
+  window._previewScale = 0.65 * (val / 100);
+  renderTplStack();
+}
+
+// ═══════════════════════════════════════
+//  预览区缩放
+// ═══════════════════════════════════════
+
+let previewScaleVal = 100;
+
+function previewZoomIn() {
+  previewScaleVal = Math.min(150, previewScaleVal + 10);
+  document.getElementById('previewZoomVal').textContent = previewScaleVal + '%';
+  applyPreviewZoom(previewScaleVal);
+}
+
+function previewZoomOut() {
+  previewScaleVal = Math.max(50, previewScaleVal - 10);
+  document.getElementById('previewZoomVal').textContent = previewScaleVal + '%';
+  applyPreviewZoom(previewScaleVal);
+}
+
+function applyPreviewZoom(val) {
+  const phone = document.querySelector('.phone-mockup');
+  if (phone) {
+    phone.style.transform = `scale(${val / 100})`;
+    phone.style.transformOrigin = 'top center';
+  }
 }
 
 // ═══════════════════════════════════════
