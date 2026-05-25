@@ -117,7 +117,35 @@ function renderMathInPreview() {
 
 // ── 工具栏功能 ──
 function fmt(tag) {
-  document.execCommand('formatBlock', false, tag);
+  if (tag === 'blockquote') {
+    // 引用：每段独立引用，不合并
+    const sel = window.getSelection();
+    if (!sel.rangeCount) return;
+    const range = sel.getRangeAt(0);
+    const fragment = range.cloneContents();
+    const div = document.createElement('div');
+    div.appendChild(fragment);
+    const html = div.innerHTML;
+    
+    // 把每个 p/div/h 标签各自包进 blockquote
+    const wrapped = html
+      .replace(/<p([^>]*)>/gi, '</blockquote><blockquote><p$1>')
+      .replace(/<\/p>/gi, '</p></blockquote>')
+      .replace(/<div([^>]*)>(?!<)/gi, '</blockquote><blockquote><div$1>')
+      .replace(/<\/div>/gi, '</div></blockquote>');
+    
+    // 去掉首尾多余的开闭标签
+    const cleaned = wrapped.replace(/^<\/blockquote>/, '').replace(/<blockquote>$/, '');
+    
+    range.deleteContents();
+    const tmp = document.createElement('div');
+    tmp.innerHTML = '<blockquote>' + cleaned + '</blockquote>';
+    while (tmp.firstChild) {
+      range.insertNode(tmp.lastChild);
+    }
+  } else {
+    document.execCommand('formatBlock', false, tag);
+  }
   render();
 }
 
