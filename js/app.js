@@ -41,6 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 初始化手机端
   initMobile();
+
+  // 初始化界面缩放
+  initUIScale();
 });
 
 // ── 获取当前配色 ──
@@ -636,7 +639,7 @@ function renderTplStack() {
         .replace(/height:\s*(\d+(?:\.\d+)?)px/g, (_, n) => `height:${(parseFloat(n)*scale).toFixed(1)}px`);
     }
 
-    const sc = 0.65; // 预览缩放比例
+    const sc = window._previewScale || 0.65; // 预览缩放比例（跟随界面缩放）
 
     // 表格样式（用模板的table_th/table_td，没有则用默认）
     const thStyle = scale(s.table_th || `background:${p};color:#fff;padding:3px 6px;font-weight:600;`, sc);
@@ -1439,6 +1442,33 @@ function getMixStyle(part) {
   if (!tpl) return null;
   const colors = getColors();
   return tpl.render(colors);
+}
+
+// ═══════════════════════════════════════
+//  界面缩放
+// ═══════════════════════════════════════
+
+function initUIScale() {
+  const saved = localStorage.getItem('uiScale') || '100';
+  const slider = document.getElementById('uiScale');
+  const valEl = document.getElementById('scaleVal');
+  if (slider) slider.value = saved;
+  if (valEl) valEl.textContent = saved + '%';
+  applyUIScale(parseInt(saved));
+}
+
+function setUIScale(val) {
+  val = parseInt(val);
+  document.getElementById('scaleVal').textContent = val + '%';
+  localStorage.setItem('uiScale', val);
+  applyUIScale(val);
+}
+
+function applyUIScale(val) {
+  document.documentElement.style.setProperty('--ui-scale', val / 100);
+  // 模板预览区域也跟着缩放
+  const previewScale = 0.65 * (val / 100);
+  window._previewScale = previewScale;
 }
 
 // ═══════════════════════════════════════

@@ -26,6 +26,11 @@
     <h1>公众号排版器 <span class="version">Pro</span></h1>
   </div>
   <div class="nav-actions">
+    <div class="ui-scale-control">
+      <span class="scale-label">🔍</span>
+      <input type="range" id="uiScale" min="80" max="140" value="100" step="10" oninput="setUIScale(this.value)">
+      <span class="scale-val" id="scaleVal">100%</span>
+    </div>
     <button class="btn btn-share" onclick="toggleShare()" title="分享">
       <span class="btn-icon">🔗</span> <span class="btn-text">分享</span>
     </button>

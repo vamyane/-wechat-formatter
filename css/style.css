@@ -22,9 +22,8 @@
   --radius-lg: 16px;
   --radius-xl: 20px;
   --transition: .2s cubic-bezier(.4,0,.2,1);
+  --ui-scale: 1;
 }
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC', 'Microsoft YaHei', sans-serif;
@@ -33,6 +32,7 @@ body {
   height: 100vh;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
+  font-size: calc(14px * var(--ui-scale));
 }
 
 /* ── 顶栏 ── */
@@ -43,7 +43,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 56px;
+  height: 60px;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -63,7 +63,7 @@ body {
 }
 
 .navbar h1 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--text);
   letter-spacing: -.3px;
@@ -85,11 +85,11 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 16px;
+  padding: 9px 18px;
   border: none;
   border-radius: var(--radius-sm);
   cursor: pointer;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   transition: all var(--transition);
   white-space: nowrap;
@@ -128,6 +128,37 @@ body {
   background: #dcfce7;
   transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
+}
+
+/* 界面缩放控件 */
+.ui-scale-control {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: var(--surface-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.scale-label {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.scale-val {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  min-width: 32px;
+  text-align: center;
+}
+
+#uiScale {
+  width: 60px;
+  height: 4px;
+  accent-color: var(--primary);
+  cursor: pointer;
 }
 
 /* ── 分隔条 ── */
@@ -169,7 +200,7 @@ body {
 /* ── 主布局 ── */
 .main {
   display: flex;
-  height: calc(100vh - 56px);
+  height: calc(100vh - 60px);
 }
 
 /* ── 模板选择面板（左侧） ── */
@@ -200,7 +231,7 @@ body {
 }
 
 .tpl-panel-title {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--text);
 }
@@ -339,14 +370,14 @@ body {
 }
 
 .stack-card-name {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--text);
   margin-bottom: 4px;
 }
 
 .stack-card-desc {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-muted);
   line-height: 1.4;
 }
@@ -499,12 +530,12 @@ body {
 }
 
 .editor-toolbar button {
-  padding: 6px 12px;
+  padding: 7px 14px;
   border: 1px solid var(--border);
   border-radius: 6px;
   background: var(--surface);
   cursor: pointer;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-secondary);
   transition: all var(--transition);
   font-weight: 500;
@@ -517,10 +548,10 @@ body {
 }
 
 .toolbar-select {
-  padding: 6px 10px;
+  padding: 7px 12px;
   border: 1px solid var(--border);
   border-radius: 6px;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-secondary);
   background: var(--surface);
   cursor: pointer;
@@ -535,7 +566,7 @@ body {
   padding: 20px 24px;
   overflow-y: auto;
   outline: none;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 2;
   background: var(--surface);
 }
@@ -577,13 +608,13 @@ body {
 
 .preview-label {
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   color: rgba(255,255,255,.5);
 }
 
 .preview-tpl {
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--primary);
   background: rgba(99,102,241,.15);
   padding: 3px 10px;
