@@ -1252,6 +1252,7 @@ body {
   z-index: 200;
   justify-content: center;
   align-items: center;
+  padding: 60px 16px 16px;
 }
 
 .share-overlay.active {
@@ -1263,9 +1264,11 @@ body {
   background: var(--surface);
   border-radius: var(--radius-lg);
   width: 360px;
-  max-width: 90%;
+  max-width: 100%;
   box-shadow: var(--shadow-lg);
   animation: slideUp .25s ease;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
 }
 
 .share-header {
@@ -1428,6 +1431,7 @@ body {
   z-index: 200;
   justify-content: center;
   align-items: center;
+  padding: 60px 16px 16px;
 }
 
 .feedback-overlay.active {
@@ -1440,7 +1444,7 @@ body {
   border-radius: var(--radius-lg);
   width: 90%;
   max-width: 480px;
-  max-height: 85vh;
+  max-height: calc(100vh - 120px);
   overflow-y: auto;
   box-shadow: var(--shadow-lg);
   animation: slideUp .25s ease;
